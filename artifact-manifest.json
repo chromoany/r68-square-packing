@@ -20,8 +20,8 @@
       "sha256": "132658153c7f0c041609650e1fdce7187fbbdbbc08d79ae336d98b730a3f47e4"
     },
     "docs/RESULTS.md": {
-      "bytes": 3630,
-      "sha256": "1daef89503cf1aacec5bba6e4bf0cd97928d71f4a87c374792bc95f71b3e8cb5"
+      "bytes": 3647,
+      "sha256": "5a188fc3d383e9e006ab389c50a0af7c108458ddd104d5809d3d4826c87441f7"
     },
     "figures/cover-color.png": {
       "bytes": 118062,
@@ -172,12 +172,12 @@
       "sha256": "d4cb3989b09ee67008d76d16037dd07aaa1fd89e881bf0f6801ce87bd6ea7cb8"
     },
     "README.en.md": {
-      "bytes": 5720,
-      "sha256": "8d2e8463e2a3167682ee78b6af112cd370e574f29b66ce797930d370f207b99b"
+      "bytes": 5751,
+      "sha256": "90c1faff12f8be7c188f2b48b321c8f2a09248aa14ed76ca6315dde8cd076169"
     },
     "README.md": {
-      "bytes": 5120,
-      "sha256": "26120883c9e667b64a4aab14f755ac6333d841d98f33444ce41112b2b1cdb6c2"
+      "bytes": 5151,
+      "sha256": "ca30be6c12e2bb7f4487e74b11a8ee005efece12c9cf623f9cad2d18d5484c9b"
     },
     "RIGHTS.md": {
       "bytes": 922,

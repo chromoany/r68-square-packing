@@ -4,10 +4,10 @@ The problem concerns **68 closed unit squares**, arbitrary real translations and
 
 ## Proved statement
 
-$$
-\frac{39}{8}<r(68)\le\widehat R<U,
+```math
+\frac{39}{8} \lt r(68) \leq \widehat R \lt U,
 \qquad U=\frac{5031404629453352}{10^{15}}.
-$$
+```
 
 The lower endpoint is 4.875, and the upper endpoint is the exact terminating decimal 5.031404629453352. The interval contains 5. No conclusion about feasibility at radius 5 follows.
 

@@ -14,9 +14,9 @@ Let $r(68)$ be the least radius of a disk containing 68 unit squares with arbitr
 
 The proved bounds are
 
-$$
-\frac{39}{8}<r(68)\le\widehat R<5.031404629453352.
-$$
+```math
+\frac{39}{8} \lt r(68) \leq \widehat R \lt 5.031404629453352.
+```
 
 **The exact global optimum, and whether 68 squares fit at radius 5, remain open.** Here $\widehat R$ is the exact enclosing radius of the supplied construction about its specified origin.
 
@@ -42,12 +42,12 @@ The construction has a largely columnar interior and several rotated groups near
 
 The radius is specified by $\widehat R=\sqrt{p/q}>0$, with coprime integers of 1451 and 1450 digits stored in the [radius certificate](proof/upper/best-68-exact-radius.json). Exact integer comparisons establish
 
-$$
+```math
 \begin{aligned}
-5.031404629453350730787899409097&<\widehat R,\\
-\widehat R&<5.031404629453350730787899409098.
+\widehat R &\gt 5.031404629453350730787899409097,\\
+\widehat R &\lt 5.031404629453350730787899409098.
 \end{aligned}
-$$
+```
 
 This algebraic number describes the supplied construction. It is not asserted to equal the global optimum $r(68)$ or the construction's minimum enclosing radius after recentering.
 
