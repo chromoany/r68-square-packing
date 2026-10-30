@@ -1,9 +1,6 @@
 \documentclass[11pt]{article}
-\input{../paper-style.tex}
-\usepackage{xeCJK}
-\setCJKmainfont{SimSun}[BoldFont=SimHei,ItalicFont=KaiTi]
-\setCJKsansfont{SimHei}
-\setCJKmonofont{SimSun}
+\input{preprint-style.tex}
+\input{chinese-fonts.tex}
 \renewcommand{\figurename}{图}
 \renewcommand{\refname}{参考文献}
 \renewcommand{\proofname}{证明}
@@ -12,25 +9,32 @@
 \newtheorem{proposition}{命题}
 \hypersetup{pdftitle={圆内68个单位正方形装箱的严格上下界},pdfauthor={张世逸},pdfsubject={精确构造与计算机辅助下界证明}}
 \begin{document}
+\thispagestyle{plain}
 \begin{center}
-{\fontsize{14}{17}\selectfont\bfseries 圆内68个单位正方形装箱的严格上下界\par}
-\vspace{7pt}
-{\fontsize{12}{14}\selectfont 张世逸\par}
-\vspace{3pt}
-上海大学；\href{mailto:chromoany@Gmail.com}{chromoany@Gmail.com}
+{\small\sffamily\color{Muted} 中文预印本\quad |\quad 2026年10月30日\par}
+\vspace{13pt}
+{\fontsize{22}{30}\selectfont\bfseries\color{Ink}
+圆内68个单位正方形装箱\\[2pt]
+的严格上下界\par}
+\vspace{14pt}
+{\large 张世逸\par}
+\vspace{4pt}
+上海大学\\[2pt]
+\href{mailto:chromoany@Gmail.com}{\small chromoany@Gmail.com}
 \end{center}
-\vspace{5pt}
-\noindent\textbf{摘要.}
+\vspace{10pt}
+\begin{abstract}
 设 $r(68)$ 为容纳68个单位正方形的可行圆盘半径的下确界，正方形可任意旋转，内部两两不交。本文给出一个有理坐标构造，并利用计算机辅助排除证明
 \[
 \frac{39}{8}<r(68)<5.031404629453352.
 \]
 构造的包围半径由一个整数系数二次方程及宽度为 $10^{-30}$ 的隔离区间精确确定。下界采用定义在80个同心圆环上的非负径向权函数，通过对连续二维参数域的完整划分，以精确有理运算和外包区间验证单块积分不等式。随文提供完整坐标、权重、划分数据和验证程序。全局精确最优值以及半径为5时能否容纳68块，仍未确定。
 
-\medskip
-\noindent\textbf{关键词.} 正方形装箱；圆盘；精确构造；加权面积；计算机辅助证明。
+\end{abstract}
+\smallskip
+\noindent{\small\textbf{关键词.} 正方形装箱；圆盘；精确构造；加权面积；计算机辅助证明。}
 
-\section{问题与主要结果}
+\section{引言与主要结果}
 记 $D_R=\{z\in\R^2:\|z\|\le R\}$。所考虑的装法由闭单位正方形组成，其内部两两不交，边界允许相切，各块均可自由平移和旋转。把外圆圆心平移至原点不限制一般性。定义 $r(68)$ 为所有可行半径的下确界。
 
 \begin{theorem}\label{thm:main}
@@ -55,7 +59,8 @@ Montanher等\cite{montanher}研究同一类允许自由旋转的圆内正方形�
 
 下界方法为每个合法正方形分配一个最小加权面积。这类资源计数思路已有先例，例如Kearney与Shiu\cite{kearney}的不可避免集方法。Karakuş近期的预印本\cite{karakus}讨论了更一般的非负测度装箱界。本文的计数不等式本身是初等的；具体证书的作用在于，对圆盘内所有实数平移与转角验证同一个径向权函数。第\ref{sec:validation}节说明有限计算为何能够覆盖这一连续族。
 
-\section{一个精确构造}
+\section{精确上界证书}\label{sec:upper}
+\subsection{有理数据与几何验证}
 每块的数据由中心 $c_i\in\Q^2$ 和单位向量 $u_i\in\Q^2$ 给出，其中 $u_i\cdot u_i=1$。令 $v_i=(-u_{i,2},u_{i,1})$，四个顶点为
 \begin{equation}\label{eq:vertices}
 c_i+\frac{\varepsilon u_i+\eta v_i}{2},
@@ -65,8 +70,8 @@ c_i+\frac{\varepsilon u_i+\eta v_i}{2},
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{../../figures/packing-zh.pdf}
-\caption{经认证的68块构造及其指定包围圆。编号与坐标文件中的方块编号一致。图中的浮点坐标仅用于显示。}\label{fig:packing}
+\includegraphics[width=0.87\linewidth]{figures/packing-color.pdf}
+\caption{经认证的68块构造。编号对应精确坐标文件；颜色表示折叠朝向 $\phi=\min(\alpha,90^\circ-\alpha)$，其中 $\alpha\in[0,90^\circ)$ 为边方向模 $90^\circ$ 的角度。红点标出第25块上的唯一最远顶点。绘图坐标仅用于显示，装法由有理数据定义。}\label{fig:packing}
 \end{figure}
 
 对任意一对 $i<j$，置
@@ -81,6 +86,7 @@ H_{ij}=\frac{1+|u_i\cdot u_j|+|\det(u_i,u_j)|}{2}.
 
 随文验证器检查全部68个方向的单位长度、全部 $\binom{68}{2}=2278$ 对方块的式\eqref{eq:sat}，以及全部272个顶点的圆内包含关系。所有检查都是有理数比较，最终归结为整数运算。由 $D_U$ 的凸性，顶点包含推出整个方块包含。因此，上界不依赖几何容差，也不依赖产生该布局的数值搜索过程。
 
+\subsection{所给构造的精确半径}
 对互素正整数 $p,q$，此指定圆盘的精确半径为
 \begin{equation}\label{eq:radius}
 \widehat R=\sqrt{p/q},\qquad
@@ -91,7 +97,7 @@ H_{ij}=\frac{1+|u_i\cdot u_j|+|\det(u_i,u_j)|}{2}.
 
 这里的圆心是固定的，不主张它在允许移动圆心时仍是该点集的最小包围圆。因此，$qX^2-p$ 是图示构造的半径方程，并非未知全局最优值 $r(68)$ 的定义多项式。
 
-\section{加权面积排除}\label{sec:weight}
+\section{加权面积下界}\label{sec:weight}
 置
 \begin{equation}\label{eq:parameters}
 s=\frac{40}{39},\qquad a=\frac{s}{2},\qquad
@@ -110,10 +116,12 @@ c=\frac{19926631}{20000000}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{../../figures/weights-zh.pdf}
-\caption{非负径向权函数。所有断点与高度均为有理数；积分计算完整保留了权重振荡产生的带符号差分。}\label{fig:weights}
+\includegraphics[width=\linewidth]{figures/weights-color.pdf}
+\caption{80个圆环上的非负径向权重：左图为阶梯函数，右图为其在圆盘 $D_5$ 上的分布，深色代表较大权重。断点与高度均为有理数；积分计算保留权重振荡产生的带符号差分。}\label{fig:weights}
 \end{figure}
 
+\FloatBarrier
+\Needspace{9\baselineskip}
 总权重为
 \begin{equation}\label{eq:cost}
 \begin{split}
@@ -144,7 +152,7 @@ T(q,m)=\sum_{k=0}^{m}\frac{(-1)^k}{(2k+1)q^{2k+1}},
 
 为了将排除结论转化为下确界的严格不等式，还须证明最小值取得。固定已知可行上端 $U$。每个单位正方形都包含以其中心为圆心、半径为 $1/2$ 的圆盘，因此 $D_U$ 中任一方块的中心范数不超过 $U-1/2$；方向向量位于紧致单位圆上。顶点包含条件为闭条件；内部不交由有限个闭条件\eqref{eq:sat}的析取表示，也为闭条件。所以，$D_U$ 内非空的可行参数集紧致，顶点范数的最大值作为连续函数在其上取得最小值。所有改善 $U$ 的装法都属于该集合，故此最小值正是 $r(68)$。已证明的排除于是给出 $r(68)>39/8$。结合下节对命题\ref{prop:weight}的验证，定理\ref{thm:main}得证。
 
-\section{连续参数域上的验证}\label{sec:validation}
+\section{全实数姿态的认证}\label{sec:validation}
 证书是一棵完整的二分划分树，而不是一组采样位置。每个叶盒采用三类检查之一。下面证明这些检查的可靠性，并说明积分所用的面积核。
 
 \subsection{降维与完整覆盖}
@@ -153,6 +161,14 @@ T(q,m)=\sum_{k=0}^{m}\frac{(-1)^k}{(2k+1)q^{2k+1}},
 \Omega=\{(x,y):x\ge y\ge0,\ (x+a)^2+(y+a)^2\le25\}.
 \end{equation}
 由于 $(179/40+a)^2+a^2>25$，根盒 $B_0=[0,179/40]^2$ 包含整个 $\Omega$。
+
+
+图\ref{fig:cover}展示储存的划分及其边界细节。图像仅用于说明；覆盖与验收由精确路径和区间比较确定。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/cover-color.pdf}
+\caption{根盒 $B_0$ 上的完整二叉证书，右图放大边界附近的细节。青色、黄色与浅灰色分别表示公共内矩形叶、导数界叶和排除叶。深色线为 $\Omega$ 的圆弧与对角边界。各叶直接由储存的二进制路径绘出。}\label{fig:cover}
+\end{figure}
 
 每次沿盒的较长边从中点二分，等长时固定先分 $x$ 方向。一个二进制字记录从根到盒的路径，两个子盒均取闭盒。给出的叶路径互异且前缀无交。令 $d$ 为最大路径长度，验证器检查整数恒等式
 \begin{equation}\label{eq:kraft}
@@ -173,6 +189,7 @@ K_B=[b_1-a,b_0+a]\times[d_1-a,d_0+a],
 \]
 前提是两个边长均为正。因为 $w\ge0$，每个这样的正方形都满足 $\int_Sw\ge\int_{K_B}w$。如果后一个积分的严格包围下端不小于 $c$，便认证整个盒。这是第一类接受检查。
 
+\Needspace{10\baselineskip}
 \subsection{导数界}
 令 $S(x,y)=[x-a,x+a]\times[y-a,y+a]$，并置
 \[
@@ -253,8 +270,8 @@ r^2z/(2\|z\|^2),&\|z\|>r
 \end{center}
 没有未判定叶。每个接受检查均在整个盒上证明式\eqref{eq:single}，排除叶则不含 $\Omega$ 中的点。完整覆盖与旋转不变性共同证明命题\ref{prop:weight}对所有实数姿态成立。
 
-\section{复现与结论范围}
-补充材料包含全部有理坐标、完整整数 $p,q$、圆环权重、叶路径和验证源码。上界验证器仅使用Python标准库中的有理算术；下界重放使用\texttt{python-flint 0.8.0}及上文证明的面积核。修订后的验证器采用显式验收检查，拒绝Python优化模式，并隔离旧搜索器的恢复入口。本次重新完整回放了全部11837个叶；运行环境与源码身份记录于补充材料。独立说明文件给出必须检查的最终成功状态；部分完成不构成证书。源码和数据的SHA256摘要标识所提供的文件。任何依赖容差的可行性测试均不作为验收依据。
+\section{复现与未决问题}
+补充材料见\url{https://github.com/chromoany/r68-square-packing}，并随源码包附于\path{anc/}目录。材料包含全部有理坐标、完整整数 $p,q$、圆环权重、叶路径和验证源码。上界验证器仅使用Python标准库中的有理算术；下界重放使用\texttt{python-flint 0.8.0}及上文证明的面积核。修订后的验证器采用显式验收检查，拒绝Python优化模式，并隔离旧搜索器的恢复入口。本次重新完整回放了全部11837个叶；运行环境与源码身份记录于补充材料。独立说明文件给出必须检查的最终成功状态；部分完成不构成证书。源码和数据的SHA256摘要标识所提供的文件。任何依赖容差的可行性测试均不作为验收依据。
 
 这是以Python和FLINT/Arb为可信计算基础的计算机辅助证明，并非证明助理形式化。严格下界覆盖所有实数摆放；精确代数上界半径对应一个明确构造。当前区间仍包含5，因此既未判定该半径的可行性，也未求得 $r(68)$ 的精确值。
 
@@ -263,6 +280,6 @@ r^2z/(2\|z\|^2),&\|z\|>r
 
 \begingroup
 \raggedright
-\input{../references.tex}
+\input{references.tex}
 \endgroup
 \end{document}

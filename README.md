@@ -31,11 +31,11 @@
 | 材料 | 内容 |
 | --- | --- |
 | [英文论文（8 页）](paper/english/manuscript.pdf) | 彩色预印本，完整数学论证、三幅图及参考文献 |
-| [中文论文（8 页）](paper/chinese/manuscript.pdf) | 独立中文版，采用期刊版式，结论与英文版一致 |
+| [中文论文（8 页）](paper/chinese/manuscript.pdf) | 独立中文彩色预印本，与英文统一 A4 版式，含三幅中文标注彩图 |
 | [精确坐标](proof/upper/best-68-exact-state.json) | 68 个有理中心和有理单位方向向量 |
 | [精确半径](proof/upper/best-68-exact-radius.json) | 完整整数 $p,q$，方程 $qR^2-p=0$ 及隔离区间 |
 | [中文复核指南](proof/README.zh.md) / [English guide](proof/README.en.md) | 上界独验、下界完整重放和成功判据 |
-| [论文源码与编译说明](paper/README.md) | 两版 LaTeX 源码和完整英文 arXiv 格式源码包 |
+| [论文源码与编译说明](paper/README.md) | 两版 LaTeX 源码、英文 arXiv 格式源码包及含中文字体的完整源码包 |
 | [成果范围](docs/RESULTS.md) / [发布说明](docs/RELEASE.md) | 证明对象、证据来源和本次实际执行的检查 |
 
 ## 精确半径
@@ -79,7 +79,7 @@ python -B proof/lower/verify-lower.py
 
 下界使用 80 个圆环上的非负径向权重，对连续姿态域的 11837 个叶子完成覆盖验证；旋转不变性和论文中的归约将其用于所有实数平移和旋转。这里的依据包括数学论证、精确有理算术以及 Arb 向外舍入区间运算。
 
-本修订版重新执行了完整上界检查和**完整下界积分回放**：11,837 个叶子全部通过，超算作业 126395001 为 `COMPLETED / 0:0`。修复了验证入口的断言依赖，隔离旧搜索入口，并补充拒错控制。数学上下界、构造和证书数据不变；[旧版](https://github.com/chromoany/r68-square-packing/tree/v1.0.0)完整保留。详见[修订说明](docs/REVISION-v2.md)和[发布检查记录](validation/release-checks.json)。本工作属于计算机辅助证明，并非 Lean/Coq 等证明助理的形式化证明；没有宣称当前世界纪录或文献优先权。
+v2 已执行完整上界检查和**完整下界积分回放**：11,837 个叶子全部通过，超算作业 126395001 为 `COMPLETED / 0:0`，并修复了验证入口。当前 v3 统一中英文彩色预印本的版式，保留全部 27 个证明文件的原始字节，未重复数学计算。两版各 8 页、三幅彩图，均已逐页检查。详见 [v3 修订说明](docs/REVISION-v3.md)、[v2 验证修订](docs/REVISION-v2.md)及[发布检查记录](validation/release-checks.json)。[v1](https://github.com/chromoany/r68-square-packing/tree/v1.0.0) 和 [v2](https://github.com/chromoany/r68-square-packing/tree/v2.0.0) 均完整保留。本工作属于计算机辅助证明，并非 Lean/Coq 等证明助理的形式化证明；没有宣称当前世界纪录或文献优先权。
 
 ## 引用与使用
 

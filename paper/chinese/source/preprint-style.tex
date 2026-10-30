@@ -1,0 +1,54 @@
+% Portable XeLaTeX preprint style. Fonts are looked up by TeX Live filenames.
+\usepackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\setsansfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf,Scale=MatchLowercase]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\setmathfont{texgyretermes-math.otf}
+\usepackage[a4paper,top=23mm,bottom=23mm,left=24mm,right=24mm,headheight=14pt,headsep=8mm,footskip=12mm]{geometry}
+\usepackage{graphicx,booktabs,caption,needspace,placeins,xcolor}
+\definecolor{Ink}{HTML}{183447}
+\definecolor{Accent}{HTML}{126B78}
+\definecolor{Muted}{HTML}{53626C}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bfseries\large\color{Ink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalfont\bfseries\color{Ink}}{\thesubsection}{0.65em}{}
+\titlespacing*{\section}{0pt}{17pt plus 2pt minus 2pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt plus 2pt minus 1pt}{6pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{Muted}圆内 68 个单位正方形装箱}
+\fancyhead[R]{\small\color{Muted}ShaneZhang}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[colorlinks=true,linkcolor=Accent,citecolor=Accent,urlcolor=Accent,unicode]{hyperref}
+\usepackage{url}
+\urlstyle{same}
+\captionsetup{font=small,labelfont={bf,color=Ink},labelsep=period,skip=7pt,justification=justified,singlelinecheck=false}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1.5pt plus 0.3pt}
+\linespread{1.16}
+\setlength{\textfloatsep}{15pt plus 2pt minus 2pt}
+\setlength{\intextsep}{13pt plus 2pt minus 2pt}
+\setlength{\floatsep}{12pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{2}
+\emergencystretch=1.6em
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+\raggedbottom
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\disk}{D}
+\newcommand{\area}{\operatorname{area}}
+\newcommand{\suppfile}[1]{\path{#1}}
+\newtheoremstyle{paperthm}{8pt}{8pt}{\normalfont}{}{\bfseries\color{Ink}}{.}{0.5em}{}
+\theoremstyle{paperthm}

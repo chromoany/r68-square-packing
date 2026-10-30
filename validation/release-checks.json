@@ -1,21 +1,28 @@
 {
-  "schema": "R68_GITHUB_READER_RELEASE_CHECKS_V2",
+  "schema": "R68_GITHUB_READER_RELEASE_CHECKS_V3",
   "edition_date": "2026-10-30",
-  "checked_at_utc": "2026-10-30T15:17:40.154826+00:00",
+  "checked_at_utc": "2026-10-30T15:43:37.463787+00:00",
   "new_mathematical_claims": false,
-  "fresh_complete_upper_replay": true,
-  "fresh_complete_lower_integral_replay": true,
-  "historical_complete_lower_replay_preserved": true,
-  "v1_files_byte_checked": 52,
-  "submitted_originals_preserved": true,
+  "new_complete_upper_replay_this_revision": false,
+  "new_complete_lower_integral_replay_this_revision": false,
+  "proof_files_byte_identical_to_v2": 27,
+  "v2_archive_files_checked": 64,
+  "submitted_original_files_unchanged": 6,
   "source_math_equivalence_checked": true,
-  "proof_inventory_entries_checked": 26,
-  "source_zip_members_checked": 33,
-  "relative_links_checked": 63,
-  "private_pattern_text_inputs_scanned": 81,
+  "proof_inventory_entries": 26,
+  "source_zip_members_checked": {
+    "english": 33,
+    "chinese": 41
+  },
+  "both_source_archives_clean_compilation_passed": true,
+  "clean_build_pages_pixel_equal_to_reviewed_pdfs": 16,
+  "relative_links_checked": 78,
+  "private_pattern_text_inputs_scanned": 124,
   "private_pattern_findings": 0,
-  "typesetting": "Both eight-page PDFs compiled; all pages rendered and visually reviewed. All fonts embedded; no missing characters or TeX overflow/underflow warnings.",
-  "fresh_replay_job": "126395001",
-  "fresh_replay_state": "COMPLETED",
-  "fresh_replay_exit": "0:0"
+  "retained_v2_full_replay": {
+    "job": "126395001",
+    "state": "COMPLETED",
+    "exit": "0:0"
+  },
+  "typesetting": "Both eight-page PDFs compiled; all 16 pages rendered and visually reviewed. All fonts embedded; no missing characters or TeX overflow/underflow warnings."
 }

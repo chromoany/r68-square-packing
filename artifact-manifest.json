@@ -1,7 +1,7 @@
 {
-  "schema": "R68_GITHUB_RELEASE_MANIFEST_V2",
+  "schema": "R68_GITHUB_RELEASE_MANIFEST_V3",
   "edition_date": "2026-10-30",
-  "scope": "Release file identities excluding this manifest itself; not a digital signature or mathematical proof.",
+  "scope": "Release file identities excluding this manifest itself; not a signature or mathematical proof.",
   "files": {
     ".gitattributes": {
       "bytes": 124,
@@ -13,11 +13,11 @@
     },
     "CITATION.cff": {
       "bytes": 816,
-      "sha256": "06595c63d092ad60dc3cafa9ba85d156d1e88a6b0483cea1318d6ccbc911348d"
+      "sha256": "c67922824cc1d0f4b162bdf1c31a4940148d5bea5cd78d8f441c8fc88b5b2509"
     },
     "docs/RELEASE.md": {
-      "bytes": 2886,
-      "sha256": "e66a1f4e9cfe219654f28dd2b8436dab207688937a77fa5cf83933bf03b985df"
+      "bytes": 3526,
+      "sha256": "20dcad226f212384398f2086815afe3d96fc9e34fb968c1e2ac925f5f9f2168e"
     },
     "docs/RESULTS.md": {
       "bytes": 3714,
@@ -26,6 +26,10 @@
     "docs/REVISION-v2.md": {
       "bytes": 2217,
       "sha256": "9eb09c6467dbe606e491f918d155ad862f31331bf8fe40fb33446937e17520a5"
+    },
+    "docs/REVISION-v3.md": {
+      "bytes": 1811,
+      "sha256": "e40edb99c6370f3f1d95a9b2d173954aba66b5509dbe5674a2b308f25fd15932"
     },
     "figures/cover-color.png": {
       "bytes": 118062,
@@ -39,37 +43,85 @@
       "bytes": 111102,
       "sha256": "3a463100eca419f529010d1f368ff53e1cf35d4548fa98f9fb368f179d508ffa"
     },
+    "paper/ARXIV.md": {
+      "bytes": 1262,
+      "sha256": "82b4ff9d515556ef1780402f184c6275d8589eb56545b11c1d1960ff71758475"
+    },
     "paper/chinese/manuscript.pdf": {
-      "bytes": 272003,
-      "sha256": "45dbf839e90773577cc5516a97076729ae68f5b2854f8576c1e3ef3378e99306"
+      "bytes": 577414,
+      "sha256": "c34f4485a5539a86cafffaf71359630121891f1c9c386cfcf2c65d644dac2af0"
     },
-    "paper/chinese/source/figures/packing-zh.pdf": {
-      "bytes": 33735,
-      "sha256": "fcecff84c4e906fdb073345e161879bb05a2ab216dab738f367037ce1b67afa5"
+    "paper/chinese/preprint-source.zip": {
+      "bytes": 1127502,
+      "sha256": "5c809a8bad6eca098903273585f518290c5c21108c223849a8353765f2e53910"
     },
-    "paper/chinese/source/figures/weights-zh.pdf": {
-      "bytes": 23176,
-      "sha256": "76c5339c8712bf447518d0204c7d3477f5bf3de08711636e1d8a0c263dd708ca"
+    "paper/chinese/source/chinese-fonts.tex": {
+      "bytes": 446,
+      "sha256": "d80c04ac1fce3006350b2ee94c0759e7a09d378e8ae0f2e6d73bde83f2006097"
     },
-    "paper/chinese/source/latex/chinese/main.tex": {
-      "bytes": 16421,
-      "sha256": "885b21244bc252ea1a78f977fdece79e8ec7f5aae85932862aa32b0347241fee"
+    "paper/chinese/source/figures/cover-color.pdf": {
+      "bytes": 331226,
+      "sha256": "fda9cb954e8569369615f2389eca07be5dbfc7f9ff471fc331e60725434c7573"
     },
-    "paper/chinese/source/latex/paper-style.tex": {
-      "bytes": 2094,
-      "sha256": "488c7c6bc2b245952f5cb5ae4dd89ccaa2cde8394e8543f6236081c63a1394f5"
+    "paper/chinese/source/figures/packing-color.pdf": {
+      "bytes": 21337,
+      "sha256": "976009e050377933abae74b2d9775dd409fb64423f2eae368f937fd7379bc2df"
     },
-    "paper/chinese/source/latex/references.tex": {
+    "paper/chinese/source/figures/weights-color.pdf": {
+      "bytes": 32030,
+      "sha256": "30b6958abbbabe8d4d3dc40b8569777e567b399632d943c6e481ac186f0fdccb"
+    },
+    "paper/chinese/source/fonts/font-provenance.json": {
+      "bytes": 2197,
+      "sha256": "d6cb4f2e4b0b4c17f901cf309b83163adadd64d74e467ad0735d32ec98794bfd"
+    },
+    "paper/chinese/source/fonts/LICENSE.txt": {
+      "bytes": 4590,
+      "sha256": "48303f3e94a8ada1d583419a8d8c4c785849cf1ff96df5133b2349e4e924cfbd"
+    },
+    "paper/chinese/source/fonts/R68SansSC-Regular.ttf": {
+      "bytes": 186052,
+      "sha256": "3fa77787517ed0d7885d2f074a10ca2e2f8102da7875b0d0e6336155c8cc09ef"
+    },
+    "paper/chinese/source/fonts/R68SansSC-Semibold.ttf": {
+      "bytes": 185956,
+      "sha256": "141dd7d2b33d0ccbe93984c642cea951392d5d2209b7e1728c33228f00b0a27b"
+    },
+    "paper/chinese/source/fonts/R68SerifSC-Regular.ttf": {
+      "bytes": 257748,
+      "sha256": "759082bfeca609926db93a6aa7e042a03f6b7f1aef0794496355c58324740f22"
+    },
+    "paper/chinese/source/fonts/R68SerifSC-Semibold.ttf": {
+      "bytes": 257680,
+      "sha256": "013641057d842596a8e0d78788fff93ef643ba6ba31d2de8d89b6abeb928d857"
+    },
+    "paper/chinese/source/fonts/README.md": {
+      "bytes": 897,
+      "sha256": "32c8c7610177d3839be1ddb448fc7087e7999dc1990809ba0042ee47b52f0bad"
+    },
+    "paper/chinese/source/main.tex": {
+      "bytes": 17524,
+      "sha256": "48e15a9e786c7c1c28702ea56784403b373d7bd32b6a9ed9bf447ade9cee2925"
+    },
+    "paper/chinese/source/preprint-style.tex": {
+      "bytes": 2458,
+      "sha256": "662d48c3dbcf48831e27bbdba022d46ad1b8b83a7b5693c558b2f193c030bd72"
+    },
+    "paper/chinese/source/references.tex": {
       "bytes": 1527,
       "sha256": "92eea576025a2a088a9c57a80ebfbc7f235894e8d782eccc2d7c79f24b363ab5"
     },
+    "paper/english/arxiv-metadata.txt": {
+      "bytes": 1003,
+      "sha256": "6f3ddaad86fcc43848790ac4b9420837ff6cc9673d0d4e9b932d30634fd53ac2"
+    },
     "paper/english/arxiv-source.zip": {
-      "bytes": 598907,
-      "sha256": "334a52139081ea3cdd9fdc12ac753269f62bbf33a247e6b7bcc1d905ff9bc924"
+      "bytes": 598917,
+      "sha256": "3264a15bdccd66643451e162689632b6b2b8387610afb7c7f30362d511c41d67"
     },
     "paper/english/manuscript.pdf": {
-      "bytes": 506253,
-      "sha256": "6685348530a1a6f3e485fc1b1499503f38cf624a3165a4f3643cbb58566541d3"
+      "bytes": 506397,
+      "sha256": "36a428651796e40b4c91ba0a52936c079f278f140d642ffbf751bb30979e3dbd"
     },
     "paper/english/source/figures/cover-color.pdf": {
       "bytes": 348840,
@@ -84,8 +136,8 @@
       "sha256": "b0c11f6b4917fa955607f4958d72dc10c31ed5d54891a44f1a0e54efb773ea61"
     },
     "paper/english/source/main.tex": {
-      "bytes": 19809,
-      "sha256": "017d388d7ef19c4684939223ad60748c0db5189605cdfac73b9dc8d2a2031eec"
+      "bytes": 19870,
+      "sha256": "3054482d61672482bcedec7453bd36aec657a0ba2f0b05b1f54f5bc9b694509a"
     },
     "paper/english/source/preprint-style.tex": {
       "bytes": 2514,
@@ -96,8 +148,8 @@
       "sha256": "92eea576025a2a088a9c57a80ebfbc7f235894e8d782eccc2d7c79f24b363ab5"
     },
     "paper/README.md": {
-      "bytes": 2831,
-      "sha256": "265d0bbb12aa761d7067f13f421b8a9d5b629986177344cb6a23f9393d4f123d"
+      "bytes": 2916,
+      "sha256": "ea1c64536de779fbbc15b8d9f0052cb2b76fafd064062b916bc0fd57684c37b2"
     },
     "proof/inventory.json": {
       "bytes": 4425,
@@ -208,20 +260,24 @@
       "sha256": "d4cb3989b09ee67008d76d16037dd07aaa1fd89e881bf0f6801ce87bd6ea7cb8"
     },
     "README.en.md": {
-      "bytes": 5947,
-      "sha256": "68b9ab5423cae3adebc31a7ad6f37084cf2f69576b0220800abfef48622f4b8f"
+      "bytes": 6240,
+      "sha256": "9a7ef82ac801b1db7355eb0f28eb5b49fd8db9fcf6bc52eae7ca907207017309"
     },
     "README.md": {
-      "bytes": 5412,
-      "sha256": "3f10e601975170105b59ff5be1e942fe1bcde19932d3f80e01ad2fda66541beb"
+      "bytes": 5635,
+      "sha256": "d7f29f073ee44d33e49fe0d8d3d00cb88aafec50b2e84ff22285b095db69d4a4"
     },
     "RIGHTS.md": {
-      "bytes": 922,
-      "sha256": "819b456a36275b309bd77a349b4dbd279530f4e6b4ae5c83d5dd9858fa847d4b"
+      "bytes": 1607,
+      "sha256": "d4bcef9509f073e9ae43e393b9fbd92e9973ddc0a89eca6b7bfa7303f1be16a5"
     },
     "tools/check_integrity.py": {
       "bytes": 1487,
       "sha256": "b6b444e33a22178bfa3a1851f0d305bace426b34ebf0373e013b49a72e0fdf9a"
+    },
+    "validation/chinese-figures.json": {
+      "bytes": 856,
+      "sha256": "7ab1a719317395e968f9501e47dda1dcfc096dee1db363f2be89fbe481b75e92"
     },
     "validation/entrypoint-controls.json": {
       "bytes": 2068,
@@ -240,16 +296,20 @@
       "sha256": "031febab9cf1a179f413f1175c8d883ff90784751d3b3674694cd879e8056f6e"
     },
     "validation/manuscript-changes.json": {
-      "bytes": 316,
-      "sha256": "a230ec62bad4cfbe292986a60d933db2eda6ee994a5d1b3c22e881abd5297443"
+      "bytes": 726,
+      "sha256": "3aabbb4d7260ef75ba4caba0dd6b9227a5ce199285e540a0268ff31a40d79b07"
     },
     "validation/pdf-qa.json": {
-      "bytes": 7632,
-      "sha256": "d9e9544fe6523e7999d450df888cb2c63fd1bc87cb5020d280a665fd4a18cee9"
+      "bytes": 8285,
+      "sha256": "08173937c6ea026ab0bd17835c58c140547a6f399835768c3eae0bb5acf847f5"
     },
     "validation/release-checks.json": {
-      "bytes": 915,
-      "sha256": "8ce0dcd3b26b23d4344dd944fcd4f46636cbb8bdfda3251269c0ba0fde74e670"
+      "bytes": 1064,
+      "sha256": "667a426f2169620b7ccc2a0a4660b59218c53afdb301ec648f163f6d0ecc2220"
+    },
+    "validation/source-archive-checks.json": {
+      "bytes": 2609,
+      "sha256": "0a4ea84a232af9c5b1fa0e9d78948f2293e626e9271ed9960723d0a7e55ff980"
     },
     "validation/upper-controls.json": {
       "bytes": 184,

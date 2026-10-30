@@ -1,27 +1,30 @@
-# Reader revision 2 — 30 October 2026
+# Bilingual color preprints — v3.0.0
 
-This revision hardens verification and adds a fresh complete replay. It introduces no new mathematical bound. The original reader release is preserved as [v1.0.0](https://github.com/chromoany/r68-square-packing/tree/v1.0.0), commit `453ad1abbc536c85496a47329ba9fe5f437de671`.
+30 October 2026. Both default reader manuscripts now use an A4 color preprint design. Each has eight pages and three vector figures. This is a presentation and packaging update; the mathematical bounds and all 27 proof files are unchanged from v2.
 
 | Artifact | Edition | SHA-256 |
 | --- | --- | --- |
-| [English PDF](../paper/english/manuscript.pdf) | 8-page color preprint, v2 | `6685348530a1a6f3e485fc1b1499503f38cf624a3165a4f3643cbb58566541d3` |
-| [Chinese PDF](../paper/chinese/manuscript.pdf) | 8-page separate manuscript, v2 | `45dbf839e90773577cc5516a97076729ae68f5b2854f8576c1e3ef3378e99306` |
-| [English source archive](../paper/english/arxiv-source.zip) | 33 files, including `anc/` | `334a52139081ea3cdd9fdc12ac753269f62bbf33a247e6b7bcc1d905ff9bc924` |
+| [English PDF](../paper/english/manuscript.pdf) | 8-page arXiv-format preprint | `36a428651796e40b4c91ba0a52936c079f278f140d642ffbf751bb30979e3dbd` |
+| [Chinese PDF](../paper/chinese/manuscript.pdf) | 8-page Chinese color preprint | `c34f4485a5539a86cafffaf71359630121891f1c9c386cfcf2c65d644dac2af0` |
+| [English source archive](../paper/english/arxiv-source.zip) | 33 files, including `anc/` | `3264a15bdccd66643451e162689632b6b2b8387610afb7c7f30362d511c41d67` |
+| [Chinese source archive](../paper/chinese/preprint-source.zip) | 41 files, including fonts and `anc/` | `5c809a8bad6eca098903273585f518290c5c21108c223849a8353765f2e53910` |
 
-## Checks executed
+## Checks for this presentation revision
 
-- Complete exact upper verification: all 68 unit directions, 272 vertices, 2278 pairs, the radius equation and isolation interval.
-- Complete fresh lower replay: all 11,837 leaves, Arb256, 16 workers; Slurm **126395001**, `COMPLETED`, exit `0:0`. Integral replay: approximately 20.245 seconds; full job: 27 seconds.
-- CPython 3.12.6, python-flint 0.8.0, FLINT 3.3.1, Linux x86_64. See [raw result](../proof/lower/fresh-full-replay.json) and [provenance](../proof/lower/fresh-replay-provenance.json).
-- Lower preflight, 17 wrapper controls, 20 entry-point controls and area-kernel self-check. Simulated controls are explicitly distinguished from real integral replay.
-- Numbered mathematical statements/formulas and all original figures unchanged; construction/weight/cover data and historical replay byte-identical to v1.
-- Both PDFs compiled and all pages rendered with PDFium and PDF.js; PDF.js visual review completed without system fonts or external CMaps. Embedded fonts, Chinese glyphs, formulas and pagination checked.
-- Source archive members checked against the corresponding published sources and supplement.
+- All pages rendered and visually checked in both languages. All fonts embedded; Chinese text remains visible without system fonts or external PDF.js CMaps. No missing-character, overflow, underflow or unresolved-reference warnings.
+- Both source archives extracted and compiled in clean directories. The resulting PDFs match the reviewed reader PDFs page by page in text and rendered pixels.
+- All 15 numbered mathematical blocks per language unchanged. Chinese figures use the same exact coordinates, 80 weights and 11,837-leaf cover; English figure bytes are unchanged.
+- All 27 proof files byte-identical to v2. Source archive members, previous-version archive, relative links and release hashes checked. No new scientific computation or integral replay was run for v3.
+- [v1.0.0](https://github.com/chromoany/r68-square-packing/tree/v1.0.0) and [v2.0.0](https://github.com/chromoany/r68-square-packing/tree/v2.0.0) are retained. Previously submitted journal materials were checked and remain unchanged.
 
-The fresh replay uses the same mathematical verification algorithm, with explicit runtime checks replacing assertions. It is not an independent reimplementation. [The revision note](REVISION-v2.md) lists the narrow manuscript changes.
+See [v3 changes](REVISION-v3.md), [PDF checks](../validation/pdf-qa.json), [source checks](../validation/source-archive-checks.json) and [release checks](../validation/release-checks.json).
 
-## Integrity
+## Retained verification evidence from v2
 
-[artifact-manifest.json](../artifact-manifest.json) records release bytes and SHA-256 values, excluding itself. Run `python -B tools/check_integrity.py` to check the release and proof inventories. These hashes identify the release; they are neither a signature nor an additional mathematical proof.
+Version 2 completed the exact upper check and a fresh full lower replay of all 11,837 leaves on Slurm job **126395001**, `COMPLETED`, exit `0:0`. The integral replay took approximately 20.245 seconds, using Arb256 and 16 workers. Environment: CPython 3.12.6, python-flint 0.8.0, FLINT 3.3.1, Linux x86_64. Its [raw result](../proof/lower/fresh-full-replay.json) and [provenance](../proof/lower/fresh-replay-provenance.json) are preserved, not regenerated for this layout update. The replay is a rerun of the same mathematical algorithm, not an independent reimplementation. The [v2 note](REVISION-v2.md) records the verification-entry repairs and small control tests.
 
-Git line-ending conversion remains disabled because the proof manifest pins raw source bytes. Original submitted materials remain unchanged in their separate archive. No editor contact or resubmission is performed by this repository update. The prepared arXiv source archive does not imply that the paper has been announced on arXiv.
+## Integrity and status
+
+[artifact-manifest.json](../artifact-manifest.json) records release bytes and SHA-256 values, excluding itself. Run `python -B tools/check_integrity.py` to check both release and proof inventories. These hashes identify the files; they are not a signature or a mathematical proof.
+
+This update does not contact the journal or submit to arXiv. The English source archive is prepared for the author's arXiv workflow; the Chinese source archive is a separate reader edition. Local compilation does not replace checking arXiv's generated PDF during actual submission.

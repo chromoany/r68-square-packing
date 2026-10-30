@@ -1,40 +1,31 @@
-# Manuscripts and source editions
+# Separate English and Chinese color preprints
 
-| Edition | PDF | Source |
-| --- | --- | --- |
-| English color preprint | [manuscript.pdf](english/manuscript.pdf) | [source/main.tex](english/source/main.tex) |
-| 中文独立稿 | [manuscript.pdf](chinese/manuscript.pdf) | [source/latex/chinese/main.tex](chinese/source/latex/chinese/main.tex) |
+| Edition | PDF | Source | Complete archive |
+| --- | --- | --- | --- |
+| English arXiv-format preprint | [8-page PDF](english/manuscript.pdf) | [main.tex](english/source/main.tex) | [arxiv-source.zip](english/arxiv-source.zip) |
+| 中文彩色预印本 | [8 页 PDF](chinese/manuscript.pdf) | [main.tex](chinese/source/main.tex) | [preprint-source.zip](chinese/preprint-source.zip) |
 
-Both PDFs have eight pages. The English preprint uses an A4 color layout with three figures. The Chinese edition retains its compact journal layout and two figures. They state the same bounds; the typography and pagination are intentionally independent.
+Both editions use the same A4 single-column design, blue-green headings and three color vector figures. They remain separate documents with the same numbered mathematical statements and formulas. The Chinese edition adapts line spacing, typography and page breaks for Chinese readers. It is a reader edition, not an additional arXiv submission.
 
-## English source
+## Compilation
 
-Use XeLaTeX with TeX Live, TeX Gyre Termes/Heros, Latin Modern Mono and TeX Gyre Termes Math. The style names the font files provided through TeX Live rather than local Windows font paths. The original edition was compiled using TeX Live 2025.
+Use XeLaTeX with TeX Live. Latin text and mathematics use the TeX Live fonts TeX Gyre Termes/Heros, Latin Modern Mono and TeX Gyre Termes Math. The Chinese project additionally uses `xeCJK` and the four TrueType font subsets included under `fonts/`; no installed Chinese system font is required. Their SIL Open Font License and provenance are included. See [font notes](chinese/source/fonts/README.md) before adding new Chinese characters.
 
-From the repository root:
+From the repository root, choose one source directory:
 
 ```sh
 cd paper/english/source
+# Or, for Chinese: cd paper/chinese/source
 xelatex -interaction=nonstopmode -halt-on-error main.tex
 xelatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The result is `main.pdf` in that source directory. The distributed `manuscript.pdf` is the frozen reader PDF; it is not overwritten by these commands.
+The result is `main.pdf` in that source directory; the distributed reader PDF `manuscript.pdf` is not overwritten. The packaged sources were also compiled from clean extracted directories with Tectonic 0.17.0 (XeTeX). All figures and styles use relative paths.
 
-[arxiv-source.zip](english/arxiv-source.zip) contains the revised 33-file upload package. It contains the same TeX and figure sources plus the 27-file proof supplement in `anc/`. In the repository, that supplement is unpacked at [`proof/`](../proof). References to `upper/` and `lower/` in the paper are relative to the supplement directory. No arXiv identifier has been assigned in this archive.
+## Archive contents
 
-## 中文源码
+The English archive contains six TeX/style/figure files plus the unchanged 27-file proof supplement under `anc/` (33 files total). The Chinese archive contains its TeX files, three vector figures, font subsets and notices, plus the same supplement. References to `upper/` and `lower/` in the paper are relative to `anc/`; the supplement is unpacked under [`proof/`](../proof) in this repository.
 
-中文版使用 XeLaTeX 与 `xeCJK`。原版要求 Times New Roman、SimSun（宋体）、SimHei（黑体）、KaiTi（楷体），以及 TeX Live 提供的数学与等宽字体。字体文件不随仓库分发；未安装这些字体时可直接阅读预编译 PDF。替换字体后应重新检查缺字、公式和分页。
+For the English arXiv workflow, use [the upload guide](ARXIV.md). Upload the English source archive, not the entire GitHub repository or the compiled reader PDF. The package has a root-level `main.tex`; no temporary TeX outputs are included. Preparation and local compilation do not imply arXiv acceptance or announcement.
 
-在仓库根目录执行：
-
-```sh
-cd paper/chinese/source/latex/chinese
-xelatex -interaction=nonstopmode -halt-on-error main.tex
-xelatex -interaction=nonstopmode -halt-on-error main.tex
-```
-
-生成文件为当前源码目录下的 `main.pdf`，不会覆盖冻结的中文版 `manuscript.pdf`。保留已有目录层级，因为样式、参考文献与图片使用相对路径。
-
-Both manuscripts were recompiled for v2 and all pages were inspected. All fonts are embedded; PDF.js rendering without system fonts or external CMaps was also checked, including the complete Chinese text. The mathematical statements, formulas and figure data are unchanged. See [the revision note](../docs/REVISION-v2.md) and [PDF checks](../validation/pdf-qa.json). The original reader edition remains available at [v1.0.0](https://github.com/chromoany/r68-square-packing/tree/v1.0.0).
+Both current PDFs were rendered with PDFium and PDF.js and reviewed page by page, including a PDF.js run without system fonts or external CMaps. All fonts are embedded. See [v3 changes](../docs/REVISION-v3.md) and [PDF checks](../validation/pdf-qa.json). Earlier editions remain in [v1.0.0](https://github.com/chromoany/r68-square-packing/tree/v1.0.0) and [v2.0.0](https://github.com/chromoany/r68-square-packing/tree/v2.0.0).

@@ -1,0 +1,7 @@
+Title: Strict bounds for packing 68 unit squares in a circle
+Authors: ShaneZhang
+Primary category: math.MG
+Comments: 8 pages, 3 figures; verification programs and exact data included as ancillary files
+
+Abstract:
+Let $r(68)$ be the infimum of radii of disks containing 68 unit squares with arbitrary orientations and pairwise disjoint interiors. We give a rational-coordinate construction and a computer-assisted exclusion proving $\frac{39}{8}<r(68)<5.031404629453352.$ The construction has an exact enclosing radius specified by a quadratic equation with integer coefficients and an isolating interval of width $10^{-30}$. The lower bound uses a nonnegative radial weight on 80 annuli. Its single-square inequality is verified on a complete subdivision of a continuous two-dimensional domain, using exact rational arithmetic and outward interval bounds. Coordinates, weights, subdivision data and verification programs accompany the paper. The exact optimum and feasibility at radius $5$ remain open.

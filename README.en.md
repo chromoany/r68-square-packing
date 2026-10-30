@@ -31,11 +31,11 @@ The construction has a largely columnar interior and several rotated groups near
 | Resource | Contents |
 | --- | --- |
 | [English paper, 8 pages](paper/english/manuscript.pdf) | Color preprint with the complete argument, three figures and references |
-| [Chinese paper, 8 pages](paper/chinese/manuscript.pdf) | Separate Chinese edition in a compact journal layout, with the same bounds |
+| [Chinese paper, 8 pages](paper/chinese/manuscript.pdf) | Separate Chinese color preprint with the same A4 design and three Chinese-labeled figures |
 | [Exact coordinates](proof/upper/best-68-exact-state.json) | 68 rational centers and rational unit direction vectors |
 | [Exact radius certificate](proof/upper/best-68-exact-radius.json) | Complete integers $p,q$, the equation $qR^2-p=0$, and an isolating interval |
 | [Verification guide](proof/README.en.md) | Exact upper verification, complete lower replay and acceptance criteria |
-| [Manuscript sources](paper/README.md) | Both LaTeX editions and the complete English arXiv-format source archive |
+| [Manuscript sources](paper/README.md) | Both LaTeX editions, the English arXiv source archive and a self-contained Chinese source archive |
 | [Results and scope](docs/RESULTS.md) / [Release notes](docs/RELEASE.md) | What is proved, provenance, and checks actually run for this release |
 
 ## An exact radius for the construction
@@ -79,7 +79,7 @@ The dependency is pinned to `python-flint==0.8.0`. Only `PASS_GLOBAL_REAL_R68_LO
 
 The lower bound uses a nonnegative radial weight on 80 annuli and a complete 11837-leaf cover of a continuous pose domain. Rotation invariance and the reductions proved in the paper extend the certificate to all real translations and rotations. The computation relies on exact rational arithmetic and outward-rounded Arb enclosures.
 
-This revision freshly reruns both the complete upper check and **the complete lower integral replay**: all 11,837 leaves passed in Slurm job 126395001 (`COMPLETED / 0:0`). Explicit acceptance checks and retired search entry points harden the verifier. The bounds and certificate data are unchanged; [v1](https://github.com/chromoany/r68-square-packing/tree/v1.0.0) is preserved. See the [revision note](docs/REVISION-v2.md) and [release checks](validation/release-checks.json). The proof remains computer-assisted, not a Lean/Coq formalization, and makes no current-record or priority claim.
+Version 2 reran the complete upper check and **the complete lower integral replay**: all 11,837 leaves passed in Slurm job 126395001 (`COMPLETED / 0:0`), with hardened verification entry points. Version 3 aligns the English and Chinese color preprints and preserves all 27 proof files byte for byte; it does not repeat the mathematical computation. Each edition has eight pages and three figures, with every page visually checked. See the [v3 revision](docs/REVISION-v3.md), [v2 verification revision](docs/REVISION-v2.md) and [release checks](validation/release-checks.json). Both [v1](https://github.com/chromoany/r68-square-packing/tree/v1.0.0) and [v2](https://github.com/chromoany/r68-square-packing/tree/v2.0.0) remain available. The proof is computer-assisted, not a Lean/Coq formalization, and makes no current-record or priority claim.
 
 ## Citation and use
 

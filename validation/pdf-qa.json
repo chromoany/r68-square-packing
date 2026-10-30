@@ -73,7 +73,7 @@
       },
       {
         "page": 8,
-        "text_characters": 2867,
+        "text_characters": 2920,
         "cjk_characters": 0,
         "pdfjs_cjk_characters": 0,
         "dimensions_points": [
@@ -83,7 +83,7 @@
       }
     ],
     "page_count": 8,
-    "sha256": "6685348530a1a6f3e485fc1b1499503f38cf624a3165a4f3643cbb58566541d3",
+    "sha256": "36a428651796e40b4c91ba0a52936c079f278f140d642ffbf751bb30979e3dbd",
     "fonts": {
       "/IHAIZV+TeXGyreHeros-Regular-Identity-H": {
         "embedded": true,
@@ -146,119 +146,138 @@
     "pdfjs_without_system_fonts_or_external_cmaps": true,
     "pdfium_all_pages_rendered": true,
     "visual_review_pending": false,
-    "visual_review": "All eight PDF.js page renders inspected: no missing glyphs, clipped formulas, overlapping objects, blank pages or isolated headings found."
+    "visual_review_complete": true,
+    "visually_reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "review_scope": "All eight rendered pages: glyphs, formulas, figures, captions, page breaks and page numbers."
   },
   "zh": {
     "pages": [
       {
         "page": 1,
-        "text_characters": 1125,
-        "cjk_characters": 614,
-        "pdfjs_cjk_characters": 614,
+        "text_characters": 1066,
+        "cjk_characters": 573,
+        "pdfjs_cjk_characters": 573,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 2,
-        "text_characters": 554,
-        "cjk_characters": 198,
-        "pdfjs_cjk_characters": 198,
+        "text_characters": 773,
+        "cjk_characters": 296,
+        "pdfjs_cjk_characters": 296,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 3,
-        "text_characters": 1007,
-        "cjk_characters": 444,
-        "pdfjs_cjk_characters": 444,
+        "text_characters": 1027,
+        "cjk_characters": 463,
+        "pdfjs_cjk_characters": 463,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 4,
-        "text_characters": 659,
-        "cjk_characters": 231,
-        "pdfjs_cjk_characters": 231,
+        "text_characters": 1018,
+        "cjk_characters": 479,
+        "pdfjs_cjk_characters": 479,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 5,
-        "text_characters": 943,
-        "cjk_characters": 531,
-        "pdfjs_cjk_characters": 531,
+        "text_characters": 759,
+        "cjk_characters": 390,
+        "pdfjs_cjk_characters": 390,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 6,
-        "text_characters": 987,
-        "cjk_characters": 260,
-        "pdfjs_cjk_characters": 260,
+        "text_characters": 1051,
+        "cjk_characters": 308,
+        "pdfjs_cjk_characters": 308,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 7,
-        "text_characters": 955,
-        "cjk_characters": 554,
-        "pdfjs_cjk_characters": 554,
+        "text_characters": 1214,
+        "cjk_characters": 657,
+        "pdfjs_cjk_characters": 657,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       },
       {
         "page": 8,
-        "text_characters": 1527,
-        "cjk_characters": 230,
-        "pdfjs_cjk_characters": 230,
+        "text_characters": 1496,
+        "cjk_characters": 197,
+        "pdfjs_cjk_characters": 197,
         "dimensions_points": [
-          396.0,
-          612.0
+          595.28,
+          841.89
         ]
       }
     ],
     "page_count": 8,
-    "sha256": "45dbf839e90773577cc5516a97076729ae68f5b2854f8576c1e3ef3378e99306",
+    "sha256": "c34f4485a5539a86cafffaf71359630121891f1c9c386cfcf2c65d644dac2af0",
     "fonts": {
-      "/IHAIZV+SimHei": {
+      "/IHAIZV+R68SansSC-Regular": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/BZIVMZ+TimesNewRomanPS-BoldMT": {
+      "/BZIVMZ+TeXGyreHeros-Regular-Identity-H": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/IXFAWU+SimSun": {
+      "/IXFAWU+R68SerifSC-Semibold": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/TQTHRL+TimesNewRomanPSMT": {
+      "/TQTHRL+TeXGyreTermes-Bold-Identity-H": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/YEUUOC+TeXGyreTermesMath-Regular-Identity-H": {
+      "/YEUUOC+R68SerifSC-Regular": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/EZSFUB+TimesNewRomanPSMT": {
+      "/AKHCZK+TeXGyreTermes-Regular-Identity-H": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/CECFXM+TimesNewRomanPSMT": {
+      "/VDVGTR+TeXGyreTermesMath-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/FRJMMF+R68SerifSC-Regular": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/FNTCNO+R68SerifSC-Regular": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
@@ -266,23 +285,39 @@
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/AKHCZK+LMMono10-Regular-Identity-H": {
+      "/GLJHLM+STIXGeneral-Italic": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/EHZZPO+SimSun": {
+      "/CAFSZL+LMMono10-Regular-Identity-H": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/DHOSHZ+TimesNewRomanPSMT": {
+      "/GNUNKI+R68SerifSC-Regular": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/DKNUBU+STIXGeneral-Italic": {
+      "/BVFHOS+R68SerifSC-Regular": {
         "embedded": true,
         "cid_ordering": "Identity"
       },
-      "/VDVGTR+TimesNewRomanPS-ItalicMT": {
+      "/GPBEBV+STIXGeneral-Regular": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/FFKCEJ+STIXGeneral-Italic": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/DDMJZA+R68SerifSC-Regular": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/BPKVVN+R68SerifSC-Regular": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/DDIEWW+TeXGyreTermes-Italic-Identity-H": {
         "embedded": true,
         "cid_ordering": "Identity"
       }
@@ -291,6 +326,17 @@
     "pdfjs_without_system_fonts_or_external_cmaps": true,
     "pdfium_all_pages_rendered": true,
     "visual_review_pending": false,
-    "visual_review": "All eight PDF.js page renders inspected: no missing glyphs, clipped formulas, overlapping objects, blank pages or isolated headings found."
+    "visual_review_complete": true,
+    "visually_reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "review_scope": "All eight rendered pages: glyphs, formulas, figures, captions, page breaks and page numbers."
   }
 }

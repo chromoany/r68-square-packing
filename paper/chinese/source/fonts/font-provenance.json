@@ -1,0 +1,45 @@
+{
+  "license": "SIL Open Font License 1.1",
+  "fonts": [
+    {
+      "font": "R68SerifSC-Regular.ttf",
+      "original_font": "NotoSerifSC-VF.ttf",
+      "original_sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280",
+      "copyright": "© 2017-2023 Adobe (http://www.adobe.com/).",
+      "weight": 400,
+      "glyph_count": 959,
+      "sha256": "759082bfeca609926db93a6aa7e042a03f6b7f1aef0794496355c58324740f22",
+      "modifications": "Document-specific glyph subset, static weight instance, renamed family and PostScript names."
+    },
+    {
+      "font": "R68SerifSC-Semibold.ttf",
+      "original_font": "NotoSerifSC-VF.ttf",
+      "original_sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280",
+      "copyright": "© 2017-2023 Adobe (http://www.adobe.com/).",
+      "weight": 600,
+      "glyph_count": 959,
+      "sha256": "013641057d842596a8e0d78788fff93ef643ba6ba31d2de8d89b6abeb928d857",
+      "modifications": "Document-specific glyph subset, static weight instance, renamed family and PostScript names."
+    },
+    {
+      "font": "R68SansSC-Regular.ttf",
+      "original_font": "NotoSansSC-VF.ttf",
+      "original_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "copyright": "© 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.",
+      "weight": 400,
+      "glyph_count": 959,
+      "sha256": "3fa77787517ed0d7885d2f074a10ca2e2f8102da7875b0d0e6336155c8cc09ef",
+      "modifications": "Document-specific glyph subset, static weight instance, renamed family and PostScript names."
+    },
+    {
+      "font": "R68SansSC-Semibold.ttf",
+      "original_font": "NotoSansSC-VF.ttf",
+      "original_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "copyright": "© 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.",
+      "weight": 600,
+      "glyph_count": 959,
+      "sha256": "141dd7d2b33d0ccbe93984c642cea951392d5d2209b7e1728c33228f00b0a27b",
+      "modifications": "Document-specific glyph subset, static weight instance, renamed family and PostScript names."
+    }
+  ]
+}

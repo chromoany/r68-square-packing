@@ -1,0 +1,64 @@
+{
+  "english": {
+    "source_archive": {
+      "path": "paper/english/arxiv-source.zip",
+      "file_count": 33,
+      "bytes": 598917,
+      "sha256": "3264a15bdccd66643451e162689632b6b2b8387610afb7c7f30362d511c41d67"
+    },
+    "compiler": "Tectonic 0.17.0 / XeTeX",
+    "pages": 8,
+    "all_page_text_equal": true,
+    "all_page_pixels_equal_at_scale_1_5": true,
+    "pixel_sha256_per_page": [
+      "d0dcbc5055e3c767e4835678542492935899a60d9835083cedaeafb3e2b35e87",
+      "778ab9d5224ce176633d50e0cd655d7d7689b3c530e65aac68f0592a32751c45",
+      "3bdbcb5cacbd0a0e6254073fdbc2084628e4b54bdf9327943a18e43f99b10246",
+      "14afe08e19abb1845bf088acef3fcd71018feebbe887fbca9f1205fb663b419a",
+      "21bc70a889f0be2c8d9f7c7ca2d66a5d0ab8b826d64c15fe54c5575e535c95e4",
+      "58da71f7bf314e0a5a2bfc2c3003ac38af1dbf2a27e0698c7da889e1a2e3e953",
+      "e0d8a640529c3a9eb7fab0c883ccd926dfab05b7a78203e05d3136081561c70d",
+      "15d8390826e066fb5767e97a102073b0809f5281631d30ff0b56297c51d92cbd"
+    ],
+    "clean_build_pdf": {
+      "bytes": 506394,
+      "sha256": "6639fc8888181190a4c23e4f4b1e253f3212c311682c8587b8e1cc9323af9754"
+    },
+    "reader_pdf": {
+      "bytes": 506397,
+      "sha256": "36a428651796e40b4c91ba0a52936c079f278f140d642ffbf751bb30979e3dbd"
+    },
+    "tex_warnings_absent": true
+  },
+  "chinese": {
+    "source_archive": {
+      "path": "paper/chinese/preprint-source.zip",
+      "file_count": 41,
+      "bytes": 1127502,
+      "sha256": "5c809a8bad6eca098903273585f518290c5c21108c223849a8353765f2e53910"
+    },
+    "compiler": "Tectonic 0.17.0 / XeTeX",
+    "pages": 8,
+    "all_page_text_equal": true,
+    "all_page_pixels_equal_at_scale_1_5": true,
+    "pixel_sha256_per_page": [
+      "0add98f141055829dac8cd07e93659458b1317a4b20f8451fc1e17ed4ff9e2ee",
+      "45cfc48940f8754ddcd010585b6c5c68dab025d8d076d2f514b121cce6ab304b",
+      "14581a818f0a83da1f53f7e953b6cfb40a827ee7a4c0ae7a75f3909378899b3b",
+      "9ff927ffde1d88500346e35cd0c30ab1c045d32cb751d23e2a6ff1c6a576beb1",
+      "ee5380707464abfb35d17460afc608a00caa6b385fe1d1bacfdf7c3ad9678ad6",
+      "19f1e020129d9887f9c8196ebbcc45eb5a39a54ebe19be17be71ed678d5f39a1",
+      "e5bf6f92a3e626697844b36874ebd8da21d3adaf8589b2aff82df3e3bf9e22e8",
+      "3c92e61c57972b6fc3991c21154b6029846211404e6b7061a389ccae57d05748"
+    ],
+    "clean_build_pdf": {
+      "bytes": 577416,
+      "sha256": "2ae7763c262f519eadc50134507146b9262ef9b2cebdc01f360f067215d2740e"
+    },
+    "reader_pdf": {
+      "bytes": 577414,
+      "sha256": "c34f4485a5539a86cafffaf71359630121891f1c9c386cfcf2c65d644dac2af0"
+    },
+    "tex_warnings_absent": true
+  }
+}

@@ -1,9 +1,20 @@
 {
-  "numbered_mathematical_statements_and_formulas_unchanged": true,
-  "all_original_figure_bytes_unchanged": true,
-  "references_added": [
-    "Friedman, Squares in Circles"
+  "edition": "v3.0.0",
+  "compared_with": "v2.0.0",
+  "numbered_mathematical_blocks_unchanged": true,
+  "numbered_blocks_per_language": 15,
+  "proof_files_byte_identical": 27,
+  "english_changes": [
+    "Public supplement repository link added."
   ],
-  "reference_updated": "Johansson, IEEE Transactions on Computers 66(8), 2017, 1281-1292",
-  "new_mathematical_bound": false
+  "chinese_changes": [
+    "A4 color preprint design aligned with the English edition.",
+    "Three color figures with Chinese labels and explanatory captions.",
+    "Embedded and bundled renamed Noto CJK font subsets.",
+    "Section headings aligned; figure placement and page breaks adjusted.",
+    "Public supplement repository link added."
+  ],
+  "english_figure_bytes_unchanged": true,
+  "new_mathematical_bound": false,
+  "new_integral_replay_this_revision": false
 }
