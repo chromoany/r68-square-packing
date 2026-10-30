@@ -1,0 +1,9 @@
+{
+  "status": "INPUTS_CHECKED_NO_INTEGRAL_REPLAY",
+  "fresh_full_replay": false,
+  "frozen_files_checked": 8,
+  "topological_leaf_count": 11837,
+  "historical_result_consistent": true,
+  "pi_inequality_recomputed": false,
+  "manifest_sha256": "fb5f16d42edef110c76f6aaf5ef51e354d403e1861b9ee9c3e9706511508c9a0"
+}

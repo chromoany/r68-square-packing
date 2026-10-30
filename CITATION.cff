@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript: ShaneZhang, Strict bounds for packing 68 unit squares in a circle, preprint, 2026."
+title: "Strict bounds for packing 68 unit squares in a circle: manuscripts and verification materials"
+authors:
+  - family-names: Zhang
+    given-names: Shane
+    affiliation: Shanghai University
+version: "2026-10-30"
+date-released: 2026-10-30
+url: "https://github.com/chromoany/r68-square-packing"
+repository-code: "https://github.com/chromoany/r68-square-packing"
+abstract: "An exact rational-coordinate construction and computer-assisted lower-bound certificate proving 39/8 < r(68) < 5.031404629453352. The exact optimum and feasibility at radius 5 remain open."
+keywords:
+  - square packing
+  - discrete geometry
+  - exact arithmetic
+  - computer-assisted proof

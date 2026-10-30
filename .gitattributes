@@ -1,0 +1,5 @@
+# Frozen certificate hashes refer to raw bytes. Never normalize these files.
+* -text
+*.pdf binary
+*.png binary
+*.zip binary

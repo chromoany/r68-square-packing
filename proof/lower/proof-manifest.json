@@ -1,0 +1,59 @@
+{
+  "default_replay": {
+    "budget_seconds": 300,
+    "workers": 16
+  },
+  "description": "Frozen proof sources/data and historical complete replay. No new full lower-bound replay is represented by this manifest.",
+  "expected": {
+    "accepted_eroded_leaves": 1583,
+    "accepted_gradient_leaves": 8923,
+    "excluded_leaves": 1331,
+    "frame": "fixed_axis_single_square_center_xy_first_octant_v1",
+    "python_flint_version": "0.8.0",
+    "root_limit": "179/40",
+    "side": "40/39",
+    "status": "PASS_GLOBAL_REAL_R68_LOWER_GRADIENT",
+    "target_radius": "39/8",
+    "threshold": "19926631/20000000",
+    "total_leaves": 11837
+  },
+  "files": {
+    "cost-audit.json": {
+      "bytes": 703,
+      "sha256": "7e895b8ad4c1cbe8a86658cd21f3a4e8d5fb917c497b149bb1c3b31d6c9cb0c1"
+    },
+    "radial_area_certificate_fast.py": {
+      "bytes": 9026,
+      "sha256": "17be6bad6e4e13c25322bfbb70c67692c285aa832dd66ed158e92c82abe3aa0c"
+    },
+    "requirements.txt": {
+      "bytes": 21,
+      "sha256": "b16ad716580aa73e201004f4b5dd85bd40dab1002421738f9308648a5c3a10a6"
+    },
+    "temp-verify-translation-gradient.py": {
+      "bytes": 8143,
+      "sha256": "c6209d7bbf4a660a89d027bda733a007452acf0cbf92cb0ded366ad470a3907f"
+    },
+    "translation-gradient-cover-state.json": {
+      "bytes": 439364,
+      "sha256": "df8ce37563d5da8c8c92138b2a3bb926d87a8761de0b1fa2c3fac380c25e11fe"
+    },
+    "translation-gradient-independent-replay.json": {
+      "bytes": 903,
+      "sha256": "a45f3e525d74e9143b68040456c30ed9cd3f11ded68d9a6c6a2327e7cbe68d56"
+    },
+    "weights.csv": {
+      "bytes": 2086,
+      "sha256": "d78d1da3c09868929c41d309f4536d7134f215695136b2a2e309a6b93ff4e443"
+    },
+    "weights.json": {
+      "bytes": 3208,
+      "sha256": "06fb1706a03e457079e56f992125c3b0cd98e260772701e45792a300d2d990fc"
+    }
+  },
+  "historical_result": "translation-gradient-independent-replay.json",
+  "kernel": "radial_area_certificate_fast.py",
+  "schema": "R68_LOWER_FROZEN_PROOF_INPUTS_V1",
+  "script": "temp-verify-translation-gradient.py",
+  "state": "translation-gradient-cover-state.json"
+}

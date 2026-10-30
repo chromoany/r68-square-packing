@@ -1,0 +1,21 @@
+{
+  "status": "PASS_GLOBAL_REAL_R68_LOWER_GRADIENT",
+  "verified_leaves": 11837,
+  "total_leaves": 11837,
+  "accepted_eroded_leaves": 1583,
+  "accepted_gradient_leaves": 8923,
+  "excluded_leaves": 1331,
+  "all_gradient_leaves_replayed": true,
+  "real_r68_strict_lower_bound": "39/8",
+  "new_radius_lower_bound_claimed": true,
+  "uniform_integral_lower": "19926631/20000000",
+  "disk_cost_upper": "340221648854546323981379175497343455372827718627901020795714155083181/5021681388309344611068631538566133132881884355571227610316800000000",
+  "target_radius": "39/8",
+  "side": "40/39",
+  "source_state_sha256": "df8ce37563d5da8c8c92138b2a3bb926d87a8761de0b1fa2c3fac380c25e11fe",
+  "exact_r68_claimed": false,
+  "arithmetic": "Independent rational boxes, interval segment intersections, and Green/Arb256 midpoint integrals",
+  "workers": 16,
+  "proof_budget_seconds": 300,
+  "seconds": 19.596186431124806
+}

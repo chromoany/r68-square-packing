@@ -1,0 +1,7 @@
+{
+  "status": "PASS_SMALL_CONTROLS",
+  "valid_controls": 5,
+  "invalid_controls_rejected": 4,
+  "actual_68_square_packing_replayed": false,
+  "seconds": 0.001013800036162138
+}

@@ -1,0 +1,95 @@
+{
+  "status": "SMALL_WRAPPER_CONTROLS_OK",
+  "controls_rejected": 17,
+  "frozen_input_preflight": true,
+  "historical_result_gate_control": true,
+  "integral_verifier_executed": false,
+  "fresh_full_replay": false,
+  "subprocess_core_controls_are_simulated": true,
+  "controls": [
+    {
+      "control": "altered result field status",
+      "rejected": true,
+      "reason": "not a complete mathematical PASS"
+    },
+    {
+      "control": "altered result field verified_leaves",
+      "rejected": true,
+      "reason": "missing or incomplete verified_leaves"
+    },
+    {
+      "control": "altered result field total_leaves",
+      "rejected": true,
+      "reason": "missing or incomplete total_leaves"
+    },
+    {
+      "control": "altered result field all_gradient_leaves_replayed",
+      "rejected": true,
+      "reason": "gradient coverage not complete"
+    },
+    {
+      "control": "altered result field new_radius_lower_bound_claimed",
+      "rejected": true,
+      "reason": "no lower-bound result"
+    },
+    {
+      "control": "altered result field source_state_sha256",
+      "rejected": true,
+      "reason": "wrong input state identity"
+    },
+    {
+      "control": "altered result field disk_cost_upper",
+      "rejected": true,
+      "reason": "incorrect disk cost"
+    },
+    {
+      "control": "altered result field exact_r68_claimed",
+      "rejected": true,
+      "reason": "unsupported exact-optimum claim"
+    },
+    {
+      "control": "altered result field workers",
+      "rejected": true,
+      "reason": "worker setting mismatch"
+    },
+    {
+      "control": "tampered proof-manifest.json",
+      "rejected": true,
+      "reason": "proof manifest identity mismatch"
+    },
+    {
+      "control": "tampered radial_area_certificate_fast.py",
+      "rejected": true,
+      "reason": "frozen file identity mismatch: radial_area_certificate_fast.py"
+    },
+    {
+      "control": "tampered translation-gradient-cover-state.json",
+      "rejected": true,
+      "reason": "frozen file identity mismatch: translation-gradient-cover-state.json"
+    },
+    {
+      "control": "simulated core no-output",
+      "rejected": true,
+      "reason": "replay did not create a fresh result"
+    },
+    {
+      "control": "simulated core partial",
+      "rejected": true,
+      "reason": "not a complete mathematical PASS"
+    },
+    {
+      "control": "simulated core nonzero-exit",
+      "rejected": true,
+      "reason": "replay process did not exit successfully (code 1)"
+    },
+    {
+      "control": "simulated core tampered-input",
+      "rejected": true,
+      "reason": "proof input changed during replay: radial_area_certificate_fast.py"
+    },
+    {
+      "control": "actual Python -O invocation",
+      "rejected": true
+    }
+  ]
+}

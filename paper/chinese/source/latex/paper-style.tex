@@ -1,0 +1,53 @@
+\usepackage{fontspec}
+\ifdefined\PortableFonts
+  \setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\else
+  \setmainfont{Times New Roman}
+\fi
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\setmathfont{texgyretermes-math.otf}
+\usepackage[paperwidth=5.5in,paperheight=8.5in,textwidth=4.9in,textheight=7.7in,centering,noheadfoot]{geometry}
+\usepackage{graphicx,booktabs,caption,needspace,placeins}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bfseries\fontsize{12}{14}\selectfont}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{13pt plus 2pt minus 2pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 1pt}{4pt}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{url}
+\urlstyle{same}
+\captionsetup{font=normalsize,labelfont=bf,labelsep=period,skip=6pt,justification=justified,singlelinecheck=false}
+\pagestyle{empty}
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{11pt}{13.2pt}%
+  \abovedisplayskip 9pt plus 2pt minus 3pt
+  \abovedisplayshortskip 0pt plus 3pt
+  \belowdisplayshortskip 6pt plus 3pt minus 3pt
+  \belowdisplayskip \abovedisplayskip}
+\makeatother
+\normalsize
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt plus 0.4pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{12pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.7}
+\setcounter{topnumber}{2}
+\emergencystretch=1.8em
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+\raggedbottom
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\disk}{D}
+\newcommand{\area}{\operatorname{area}}
+\newcommand{\suppfile}[1]{\path{#1}}
+\newtheoremstyle{paperthm}{6pt}{6pt}{\normalfont}{}{\bfseries}{.}{0.5em}{}
+\theoremstyle{paperthm}
