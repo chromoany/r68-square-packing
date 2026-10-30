@@ -3,7 +3,7 @@
     "budget_seconds": 300,
     "workers": 16
   },
-  "description": "Frozen proof sources/data and historical complete replay. No new full lower-bound replay is represented by this manifest.",
+  "description": "Fixed proof data with explicit certificate checks and a library-only area kernel. Historical replay is reference evidence only; a fresh replay must be produced by verify-lower.py.",
   "expected": {
     "accepted_eroded_leaves": 1583,
     "accepted_gradient_leaves": 8923,
@@ -22,17 +22,17 @@
       "bytes": 703,
       "sha256": "7e895b8ad4c1cbe8a86658cd21f3a4e8d5fb917c497b149bb1c3b31d6c9cb0c1"
     },
-    "radial_area_certificate_fast.py": {
-      "bytes": 9026,
-      "sha256": "17be6bad6e4e13c25322bfbb70c67692c285aa832dd66ed158e92c82abe3aa0c"
+    "radial_area_kernel.py": {
+      "bytes": 4256,
+      "sha256": "483b193f10f9815b092197b27cebecd6e134496d02c535f10b151b0e9d8fb691"
+    },
+    "replay_lower_bound.py": {
+      "bytes": 9333,
+      "sha256": "3dc87ac643f7183df0b3a065b39bdf880b8d43b5693b9989d9efa496b896dea0"
     },
     "requirements.txt": {
       "bytes": 21,
       "sha256": "b16ad716580aa73e201004f4b5dd85bd40dab1002421738f9308648a5c3a10a6"
-    },
-    "temp-verify-translation-gradient.py": {
-      "bytes": 8143,
-      "sha256": "c6209d7bbf4a660a89d027bda733a007452acf0cbf92cb0ded366ad470a3907f"
     },
     "translation-gradient-cover-state.json": {
       "bytes": 439364,
@@ -52,8 +52,8 @@
     }
   },
   "historical_result": "translation-gradient-independent-replay.json",
-  "kernel": "radial_area_certificate_fast.py",
-  "schema": "R68_LOWER_FROZEN_PROOF_INPUTS_V1",
-  "script": "temp-verify-translation-gradient.py",
+  "kernel": "radial_area_kernel.py",
+  "schema": "R68_LOWER_FROZEN_PROOF_INPUTS_V2",
+  "script": "replay_lower_bound.py",
   "state": "translation-gradient-cover-state.json"
 }

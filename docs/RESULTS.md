@@ -9,7 +9,7 @@ The problem concerns **68 closed unit squares**, arbitrary real translations and
 \qquad U=\frac{5031404629453352}{10^{15}}.
 ```
 
-The lower endpoint is 4.875, and the upper endpoint is the exact terminating decimal 5.031404629453352. The interval contains 5. No conclusion about feasibility at radius 5 follows.
+The elementary area bound is `sqrt(68/pi) = 4.65242649...`; the proved lower endpoint is 4.875, and the upper endpoint is the exact terminating decimal 5.031404629453352. The interval contains 5. No conclusion about feasibility at radius 5 follows.
 
 ## The explicit packing
 

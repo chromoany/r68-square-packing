@@ -12,10 +12,10 @@ Here squares may have arbitrary real translations and rotations; their interiors
 ## Files and arithmetic
 
 - `upper/` contains one exact 68-square construction, its exact fixed-origin radius, an independent standard-library verifier, and the result of the complete verification on 30 October 2026.
-- `lower/` contains the frozen radial-weight and pose-cover data, two original proof kernels, the archived complete replay result, and a new verification wrapper with small failure-path controls.
-- `inventory.json` records the size and SHA-256 of every other file in this supplement. `lower/proof-manifest.json` separately freezes the eight original lower-bound payload files; its SHA-256 is embedded in the wrapper.
+- `lower/` contains the frozen radial-weight and pose-cover data, hardened proof kernels, the archived complete replay result, a fresh complete replay, and verification entry points with failure-path controls.
+- `inventory.json` records the size and SHA-256 of every other file in this supplement. `lower/proof-manifest.json` separately freezes the eight lower-bound input files for this revision; its SHA-256 is embedded in the wrapper.
 
-The original coordinate, radius, cover, weight, cost and replay files are byte-preserving copies. Exact rational strings in the coordinate and cover files are authoritative. In particular, the verifier reads `shell_edges` and `shell_weights` from `translation-gradient-cover-state.json`; the auxiliary weight JSON/CSV files provide the same rational weights for convenient inspection. Figures and displayed decimal approximations are illustrations, not proof input.
+The original coordinate, radius, cover, weight, cost and historical replay data remain byte-identical to v1. The two proof kernels retain their mathematical expressions; acceptance assertions are now explicit checks. The former search CLI and temporary-name entry point are retired; their original sources remain in the v1 release. Exact rational strings in the coordinate and cover files are authoritative. In particular, the verifier reads `shell_edges` and `shell_weights` from `translation-gradient-cover-state.json`; the auxiliary weight JSON/CSV files provide the same rational weights for convenient inspection. Figures and displayed decimal approximations are illustrations, not proof input.
 
 All commands below are run from this supplement directory with Python 3. The upper verifier uses only the Python standard library. The lower integral replay additionally requires `python-flint==0.8.0` and uses Arb at 256-bit precision. The mathematical arguments and implementation assume correct Python integer/rational arithmetic and correct FLINT/Arb enclosure operations; this is not a proof-assistant formalization.
 
@@ -27,7 +27,7 @@ python upper/verify-upper.py upper/best-68-exact-state.json --radius upper/best-
 
 A successful complete run prints `PASS_EXACT_68_SQUARE_UPPER_BOUND`. It checks 68 exact unit direction vectors, all 272 vertices, and all 2,278 unordered square pairs using exact rational separating-axis comparisons. Tangency is accepted. It also independently derives the largest squared vertex distance and checks the radius polynomial and isolating interval.
 
-The complete target was freshly replayed for this edition. `upper/verification-result.json` records all 2,278 pairs and 272 vertices passing, with first successful separating-axis counts 1,847, 411, 10 and 10. Its recorded elapsed time is approximately 0.328 seconds on the machine used; this is an observation, not a runtime guarantee.
+The complete target was freshly replayed for this edition. `upper/verification-result.json` records all 2,278 pairs and 272 vertices passing, with first successful separating-axis counts 1,847, 411, 10 and 10. Its elapsed time is recorded in the result file; this is an observation, not a runtime guarantee.
 
 The supplied construction has fixed-origin radius
 
@@ -75,23 +75,26 @@ python lower/verify-lower.py --workers 16 --budget 300 --scratch-parent .
 
 `--scratch-parent` must name an existing writable directory. Each invocation creates its own temporary child directory and removes that child when finished; the packaged original files are not modified. Standard output contains the resulting JSON and may be redirected to a new result file if desired.
 
-The frozen original verifier accepts 1–32 workers and a replay budget of 1–600 seconds. These limits are its preserved per-invocation interface, not a claim about a platform limit or a scientific search stopping rule. Budget exhaustion produces an incomplete result, never a lower-bound certificate. Do not invoke the wrapper with Python `-O` or `-OO`: its preserved proof kernels use assertions, and the wrapper explicitly rejects optimized mode.
+The fixed verifier accepts 1–32 workers and a replay budget of 1–600 seconds. These limits are its preserved per-invocation interface, not a claim about a platform limit or a scientific search stopping rule. Budget exhaustion produces an incomplete result, never a lower-bound certificate. Do not invoke the wrapper with Python `-O` or `-OO`: both the wrapper and replay core explicitly reject optimized mode. All certificate acceptance checks also remain active when compiled with optimization; the small regression controls test this separately.
 
 Before replay, the wrapper verifies every frozen source/data identity, the rational problem parameters, the nonnegative weights, the exact cost comparison and the prefix-free binary cover topology. It checks that the 11,837 leaves consist of 1,583 inner-rectangle leaves, 8,923 gradient leaves and 1,331 excluded leaves, with no pending leaves or strict-gap witnesses. These preflight checks do not evaluate any integral.
 
 For an actual replay the wrapper runs the frozen verifier in fresh scratch, without copying the historical result into it. It checks the process exit code, newly generated result, exact status and leaf counts, all-gradient completion, input identity and unchanged proof files. Only a complete fresh replay prints `PASS_GLOBAL_REAL_R68_LOWER_GRADIENT` together with `fresh_full_replay: true`. The kernel also recomputes the outward-rounded integral and derivative bounds and the required upper enclosure of π. An exit code of zero, an archived `PASS`, or completed file transport alone is insufficient.
 
-### What was and was not rerun for this edition
+### Fresh replay and preserved historical evidence
 
-`lower/translation-gradient-independent-replay.json` is the preserved historical complete replay: all 11,837 leaves passed with 16 workers and a recorded duration of approximately 19.596 seconds. The full integral replay was **not rerun** when this submission supplement was assembled. That historical result is not relabeled as a fresh result.
+`lower/fresh-full-replay.json` records a **new full replay** of all 11,837 leaves, with 16 workers and 256-bit Arb arithmetic, taking approximately 20.245 seconds. Slurm job **126395001** completed with exit code `0:0`. The environment was CPython 3.12.6, python-flint 0.8.0, FLINT 3.3.1, Linux x86_64. The provenance file records source, result and manifest hashes. This is a fresh rerun of the supplied verifier, not a new independent implementation or a new bound.
 
-The new wrapper was checked with small controls only. `lower/wrapper-control-result.json` records 17 rejected malformed or incomplete cases, including modified source/data, missing or partial output, unsuccessful subprocess exit, altered proof inputs and an actual Python `-O` invocation. The subprocess-output failure controls are simulations, as the result explicitly records. These tests do not establish the integral inequalities again.
+`lower/translation-gradient-independent-replay.json` remains the unchanged historical result (approximately 19.596 seconds). It is never copied into fresh replay output. `source-equivalence.json` records the mathematical-expression comparison between v1 and v2 after normalizing assertions to explicit checks; the actual changed sources are available in Git history.
+
+`wrapper-control-result.json` records 17 rejection controls. `entrypoint-control-result.json` records 20 further controls: actual `-O`/`-OO` invocations, retired entry points, isolated invalid leaves, and valid-exclusion/deadline cases. The isolated leaf tests use test doubles and do not replace the full integral replay. `kernel-selftest.log` records the area-kernel checks executed in the same compute job.
 
 The following commands require only the Python standard library:
 
 ```text
 python lower/verify-lower.py --check-inputs
 python lower/test-wrapper.py
+python lower/test-entrypoints.py
 ```
 
 Run `test-wrapper.py` from a writable current directory. The preflight status is `INPUTS_CHECKED_NO_INTEGRAL_REPLAY`; it does not recompute π or any leaf integral. The control-test status is `SMALL_WRAPPER_CONTROLS_OK`. Neither status means that the complete lower-bound replay has just run.

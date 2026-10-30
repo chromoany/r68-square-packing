@@ -44,7 +44,7 @@ for field,value in (
     bad[field]=value
     rejection('altered result field '+field,lambda b=bad:module.check_result(b,manifest,state,16,300),rows)
 
-for filename in ('proof-manifest.json','radial_area_certificate_fast.py','translation-gradient-cover-state.json'):
+for filename in ('proof-manifest.json','radial_area_kernel.py','translation-gradient-cover-state.json'):
     with tempfile.TemporaryDirectory(prefix='temp-r68-wrapper-control-',dir=Path.cwd()) as temporary:
         path=Path(temporary)
         require(path.resolve().parent==Path.cwd().resolve(),'control directory escaped its parent')

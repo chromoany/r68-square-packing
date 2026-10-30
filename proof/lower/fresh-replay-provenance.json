@@ -1,0 +1,28 @@
+{
+  "schema": "R68_FIXED_CERTIFICATE_REPLAY_V2",
+  "date": "2026-10-30",
+  "job_id": "126395001",
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit_code": "0:0",
+  "scheduler_elapsed": "00:00:27",
+  "allocated_cpus": 16,
+  "partition": "kshcnormal",
+  "fresh_full_replay": true,
+  "verified_leaves": 11837,
+  "replay_seconds": 20.24460596218705,
+  "environment": {
+    "python": "3.12.6",
+    "python_implementation": "CPython",
+    "python_flint": "0.8.0",
+    "flint": "3.3.1",
+    "system": "Linux",
+    "architecture": "x86_64",
+    "arb_precision_bits": 256
+  },
+  "result_sha256": "2e8814884b109766b593a2867a2f729fa2ca50222f8bae50d942406527ad1bac",
+  "proof_manifest_sha256": "d925b6766bfa02532cae4a5e9f67f4688118440ef42e042671279bc5577efbd4",
+  "input_transport_sha256": "d33d9652f3af8ceca8af4a84376929fc7e5eb8e42271353ea0b135520cdd44c9",
+  "raw_result_and_returned_source_identities_checked": true,
+  "historical_result_preserved": true,
+  "new_mathematical_bound": false
+}

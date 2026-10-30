@@ -61,6 +61,7 @@ python -B proof/upper/verify-upper.py proof/upper/best-68-exact-state.json --rad
 python -B proof/upper/verify-upper.py --self-test
 python -B proof/lower/verify-lower.py --check-inputs
 python -B proof/lower/test-wrapper.py
+python -B proof/lower/test-entrypoints.py
 ```
 
 完整上界检查的成功状态为 `PASS_EXACT_68_SQUARE_UPPER_BOUND`：它重新检查全部 272 个顶点、2278 对正方形、精确半径方程与隔离区间。
@@ -78,7 +79,7 @@ python -B proof/lower/verify-lower.py
 
 下界使用 80 个圆环上的非负径向权重，对连续姿态域的 11837 个叶子完成覆盖验证；旋转不变性和论文中的归约将其用于所有实数平移和旋转。这里的依据包括数学论证、精确有理算术以及 Arb 向外舍入区间运算。
 
-本次 GitHub 发布重新运行了完整上界检查、下界输入预检和小型控制测试；历史完整下界重放原件保持不变，**未在此次打包时重新执行积分重放**。详见[发布检查记录](validation/release-checks.json)。本工作属于计算机辅助证明，并非 Lean/Coq 等证明助理的形式化证明；没有宣称当前世界纪录或文献优先权。
+本修订版重新执行了完整上界检查和**完整下界积分回放**：11,837 个叶子全部通过，超算作业 126395001 为 `COMPLETED / 0:0`。修复了验证入口的断言依赖，隔离旧搜索入口，并补充拒错控制。数学上下界、构造和证书数据不变；[旧版](https://github.com/chromoany/r68-square-packing/tree/v1.0.0)完整保留。详见[修订说明](docs/REVISION-v2.md)和[发布检查记录](validation/release-checks.json)。本工作属于计算机辅助证明，并非 Lean/Coq 等证明助理的形式化证明；没有宣称当前世界纪录或文献优先权。
 
 ## 引用与使用
 

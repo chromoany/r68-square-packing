@@ -58,9 +58,9 @@
       "reason": "proof manifest identity mismatch"
     },
     {
-      "control": "tampered radial_area_certificate_fast.py",
+      "control": "tampered radial_area_kernel.py",
       "rejected": true,
-      "reason": "frozen file identity mismatch: radial_area_certificate_fast.py"
+      "reason": "frozen file identity mismatch: radial_area_kernel.py"
     },
     {
       "control": "tampered translation-gradient-cover-state.json",
@@ -85,7 +85,7 @@
     {
       "control": "simulated core tampered-input",
       "rejected": true,
-      "reason": "proof input changed during replay: radial_area_certificate_fast.py"
+      "reason": "proof input changed during replay: radial_area_kernel.py"
     },
     {
       "control": "actual Python -O invocation",

@@ -1,0 +1,88 @@
+{
+  "status": "ENTRYPOINT_REGRESSION_CONTROLS_OK",
+  "controls": [
+    {
+      "control": "verify-lower.py -O",
+      "rejected": true
+    },
+    {
+      "control": "verify-lower.py -OO",
+      "rejected": true
+    },
+    {
+      "control": "replay_lower_bound.py -O",
+      "rejected": true
+    },
+    {
+      "control": "replay_lower_bound.py -OO",
+      "rejected": true
+    },
+    {
+      "control": "temp-verify-translation-gradient.py normal",
+      "rejected": true
+    },
+    {
+      "control": "temp-verify-translation-gradient.py -O",
+      "rejected": true
+    },
+    {
+      "control": "temp-verify-translation-gradient.py -OO",
+      "rejected": true
+    },
+    {
+      "control": "radial_area_certificate_fast.py normal",
+      "rejected": true
+    },
+    {
+      "control": "radial_area_certificate_fast.py -O",
+      "rejected": true
+    },
+    {
+      "control": "radial_area_certificate_fast.py -OO",
+      "rejected": true
+    },
+    {
+      "control": "excluded invalid leaf optimize=0",
+      "rejected": true
+    },
+    {
+      "control": "accepted_eroded invalid leaf optimize=0",
+      "rejected": true
+    },
+    {
+      "control": "accepted_gradient invalid leaf optimize=0",
+      "rejected": true
+    },
+    {
+      "control": "unknown invalid leaf optimize=0",
+      "rejected": true
+    },
+    {
+      "control": "valid exclusion and deadline optimize=0",
+      "passed": true
+    },
+    {
+      "control": "excluded invalid leaf optimize=2",
+      "rejected": true
+    },
+    {
+      "control": "accepted_eroded invalid leaf optimize=2",
+      "rejected": true
+    },
+    {
+      "control": "accepted_gradient invalid leaf optimize=2",
+      "rejected": true
+    },
+    {
+      "control": "unknown invalid leaf optimize=2",
+      "rejected": true
+    },
+    {
+      "control": "valid exclusion and deadline optimize=2",
+      "passed": true
+    }
+  ],
+  "count": 20,
+  "integral_verifier_executed": false,
+  "leaf_controls_use_test_doubles": true
+}

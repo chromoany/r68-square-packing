@@ -21,7 +21,7 @@ Shanghai University\\[2pt]
 \vspace{10pt}
 \begin{abstract}
 
-Let $r(68)$ be the least radius of a disk containing 68 unit squares with arbitrary orientations and pairwise disjoint interiors. We give a rational-coordinate construction and a computer-assisted exclusion proving
+Let $r(68)$ be the infimum of radii of disks containing 68 unit squares with arbitrary orientations and pairwise disjoint interiors. We give a rational-coordinate construction and a computer-assisted exclusion proving
 \[
 \frac{39}{8}<r(68)<5.031404629453352.
 \]
@@ -51,6 +51,8 @@ Moreover,
 \end{theorem}
 
 Montanher et al.~\cite{montanher} study the same freely rotating square-in-circle problem and give rigorous interval enclosures for the three-square optimum and its configurations. The distinction between approximate feasibility and proved feasibility is also central to Domes and Neumaier~\cite{domes}. For a direct historical comparison at $n=68$, Jelliss~\cite{jelliss} describes a grid construction of radius $\sqrt{26}$. The upper bound in \eqref{eq:bounds} is smaller, since $U^2<26$. This comparison does not assert a current record or priority over all published constructions.
+
+The elementary area bound is $r(68)\ge\sqrt{68/\pi}\approx4.65242649$; the present strict lower bound raises this baseline to $39/8=4.875$. Our contribution is an explicit exact construction together with a reproducible exclusion certificate over all real poses. Friedman's collection~\cite{friedman} provides further context for smaller instances; the version consulted lists $n\le50$ and supplies no comparison at $n=68$.
 
 The lower-bound method assigns a minimum weighted area to every admissible square. Resource-counting arguments of this kind have predecessors in the unavoidable-set method of Kearney and Shiu~\cite{kearney}. A recent preprint of Karakuş~\cite{karakus} discusses more general nonnegative measures for packing bounds. Here the counting inequality itself is elementary; the substantive certificate verifies a particular radial weight for every real translation and orientation in a disk. Section~\ref{sec:validation} explains why its finite computations cover this continuous family.
 
@@ -269,7 +271,7 @@ There are no pending leaves. Each acceptance test establishes \eqref{eq:single} 
 
 \Needspace{17\baselineskip}
 \section{Reproducibility and remaining questions}
-The accompanying supplement contains the complete rational coordinates, the exact integers $p,q$, the annular weights, all leaf paths, and the verification source. In the arXiv source archive these files are in the \path{anc/} directory; the file paths cited here are relative to that directory. The upper-bound verifier uses only Python's standard-library rational arithmetic. The lower-bound replay uses \texttt{python-flint 0.8.0} and the area kernel proved above. Separate instructions explain the required final success status; a partial run is not a certificate. Source and data SHA256 digests identify the supplied files. No tolerance-dependent feasibility test is used as an acceptance criterion.
+The accompanying supplement contains the complete rational coordinates, the exact integers $p,q$, the annular weights, all leaf paths, and the verification source. In the arXiv source archive these files are in the \path{anc/} directory; the file paths cited here are relative to that directory. The upper-bound verifier uses only Python's standard-library rational arithmetic. The lower-bound replay uses \texttt{python-flint 0.8.0} and the area kernel proved above. The revised verifier uses explicit acceptance checks, rejects optimized Python execution, and has no search-resume certification entry point. A fresh complete replay verifies all 11,837 leaves; its environment and source identities are recorded in the supplement. Separate instructions explain the required final success status; a partial run is not a certificate. Source and data SHA256 digests identify the supplied files. No tolerance-dependent feasibility test is used as an acceptance criterion.
 
 These are computer-assisted proofs, with Python and FLINT/Arb in the trusted computational base; they are not proof-assistant formalizations. The strict lower bound applies to all real placements. The exact algebraic upper radius applies to one explicit construction. The interval still contains $5$, so neither feasibility at that radius nor the exact value of $r(68)$ is decided.
 

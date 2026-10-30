@@ -1,0 +1,296 @@
+{
+  "en": {
+    "pages": [
+      {
+        "page": 1,
+        "text_characters": 2632,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 2,
+        "text_characters": 2780,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 3,
+        "text_characters": 1191,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 4,
+        "text_characters": 1933,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 5,
+        "text_characters": 1969,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 6,
+        "text_characters": 2170,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 7,
+        "text_characters": 2376,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      },
+      {
+        "page": 8,
+        "text_characters": 2867,
+        "cjk_characters": 0,
+        "pdfjs_cjk_characters": 0,
+        "dimensions_points": [
+          595.28,
+          841.89
+        ]
+      }
+    ],
+    "page_count": 8,
+    "sha256": "6685348530a1a6f3e485fc1b1499503f38cf624a3165a4f3643cbb58566541d3",
+    "fonts": {
+      "/IHAIZV+TeXGyreHeros-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/BZIVMZ+TeXGyreTermes-Bold-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/IXFAWU+TeXGyreTermes-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/TQTHRL+TeXGyreTermesMath-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/YEUUOC+LMMono10-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/CADNYB+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/CECFXM+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/FGPQBL+STIXGeneral-Italic": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/GLJHLM+STIXGeneral-Italic": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/BFACEZ+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/GPBEBV+STIXGeneral-Regular": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/FFKCEJ+STIXGeneral-Italic": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/QXVZBQ+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/AKHCZK+TeXGyreTermes-Italic-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      }
+    },
+    "tex_warning_markers_absent": true,
+    "pdfjs_without_system_fonts_or_external_cmaps": true,
+    "pdfium_all_pages_rendered": true,
+    "visual_review_pending": false,
+    "visual_review": "All eight PDF.js page renders inspected: no missing glyphs, clipped formulas, overlapping objects, blank pages or isolated headings found."
+  },
+  "zh": {
+    "pages": [
+      {
+        "page": 1,
+        "text_characters": 1125,
+        "cjk_characters": 614,
+        "pdfjs_cjk_characters": 614,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 2,
+        "text_characters": 554,
+        "cjk_characters": 198,
+        "pdfjs_cjk_characters": 198,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 3,
+        "text_characters": 1007,
+        "cjk_characters": 444,
+        "pdfjs_cjk_characters": 444,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 4,
+        "text_characters": 659,
+        "cjk_characters": 231,
+        "pdfjs_cjk_characters": 231,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 5,
+        "text_characters": 943,
+        "cjk_characters": 531,
+        "pdfjs_cjk_characters": 531,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 6,
+        "text_characters": 987,
+        "cjk_characters": 260,
+        "pdfjs_cjk_characters": 260,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 7,
+        "text_characters": 955,
+        "cjk_characters": 554,
+        "pdfjs_cjk_characters": 554,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      },
+      {
+        "page": 8,
+        "text_characters": 1527,
+        "cjk_characters": 230,
+        "pdfjs_cjk_characters": 230,
+        "dimensions_points": [
+          396.0,
+          612.0
+        ]
+      }
+    ],
+    "page_count": 8,
+    "sha256": "45dbf839e90773577cc5516a97076729ae68f5b2854f8576c1e3ef3378e99306",
+    "fonts": {
+      "/IHAIZV+SimHei": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/BZIVMZ+TimesNewRomanPS-BoldMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/IXFAWU+SimSun": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/TQTHRL+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/YEUUOC+TeXGyreTermesMath-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/EZSFUB+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/CECFXM+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/FGPQBL+STIXGeneral-Italic": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/AKHCZK+LMMono10-Regular-Identity-H": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/EHZZPO+SimSun": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/DHOSHZ+TimesNewRomanPSMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/DKNUBU+STIXGeneral-Italic": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      },
+      "/VDVGTR+TimesNewRomanPS-ItalicMT": {
+        "embedded": true,
+        "cid_ordering": "Identity"
+      }
+    },
+    "tex_warning_markers_absent": true,
+    "pdfjs_without_system_fonts_or_external_cmaps": true,
+    "pdfium_all_pages_rendered": true,
+    "visual_review_pending": false,
+    "visual_review": "All eight PDF.js page renders inspected: no missing glyphs, clipped formulas, overlapping objects, blank pages or isolated headings found."
+  }
+}

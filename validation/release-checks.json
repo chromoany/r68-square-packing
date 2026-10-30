@@ -1,49 +1,21 @@
 {
-  "schema": "R68_GITHUB_READER_RELEASE_CHECKS_V1",
+  "schema": "R68_GITHUB_READER_RELEASE_CHECKS_V2",
   "edition_date": "2026-10-30",
-  "checked_at_utc": "2026-10-30T14:10:09.278828+00:00",
-  "python_version": "3.14.8",
-  "platform": "win32",
+  "checked_at_utc": "2026-10-30T15:17:40.154826+00:00",
   "new_mathematical_claims": false,
   "fresh_complete_upper_replay": true,
-  "fresh_complete_lower_integral_replay": false,
+  "fresh_complete_lower_integral_replay": true,
   "historical_complete_lower_replay_preserved": true,
-  "original_artifacts_byte_checked": 36,
-  "proof_inventory_entries_checked": 18,
-  "relative_links_checked": 58,
-  "private_pattern_text_inputs_scanned": 63,
+  "v1_files_byte_checked": 52,
+  "submitted_originals_preserved": true,
+  "source_math_equivalence_checked": true,
+  "proof_inventory_entries_checked": 26,
+  "source_zip_members_checked": 33,
+  "relative_links_checked": 63,
+  "private_pattern_text_inputs_scanned": 81,
   "private_pattern_findings": 0,
-  "privacy_scope": "Curated reader files and archive members; no correspondence, signatures, authentication helpers or platform credentials are included.",
-  "checks": [
-    {
-      "check": "exact-upper",
-      "command": "python -B proof/upper/verify-upper.py proof/upper/best-68-exact-state.json --radius proof/upper/best-68-exact-radius.json",
-      "exit_code": 0,
-      "status": "PASS_EXACT_68_SQUARE_UPPER_BOUND",
-      "result": "validation/exact-upper.json"
-    },
-    {
-      "check": "upper-controls",
-      "command": "python -B proof/upper/verify-upper.py --self-test",
-      "exit_code": 0,
-      "status": "PASS_SMALL_CONTROLS",
-      "result": "validation/upper-controls.json"
-    },
-    {
-      "check": "lower-preflight",
-      "command": "python -B proof/lower/verify-lower.py --check-inputs",
-      "exit_code": 0,
-      "status": "INPUTS_CHECKED_NO_INTEGRAL_REPLAY",
-      "result": "validation/lower-preflight.json"
-    },
-    {
-      "check": "lower-controls",
-      "command": "python -B proof/lower/test-wrapper.py",
-      "exit_code": 0,
-      "status": "SMALL_WRAPPER_CONTROLS_OK",
-      "result": "validation/lower-controls.json"
-    }
-  ],
-  "typesetting": "Previously reviewed PDF bytes preserved; not recompiled in this release.",
-  "readme_visual_review": "Source, links and scientific figure inspected; GitHub rendering not yet checked."
+  "typesetting": "Both eight-page PDFs compiled; all pages rendered and visually reviewed. All fonts embedded; no missing characters or TeX overflow/underflow warnings.",
+  "fresh_replay_job": "126395001",
+  "fresh_replay_state": "COMPLETED",
+  "fresh_replay_exit": "0:0"
 }

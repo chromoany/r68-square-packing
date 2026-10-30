@@ -39,5 +39,5 @@
   "status": "PASS_EXACT_68_SQUARE_UPPER_BOUND",
   "arithmetic": "Python standard-library Fraction; exact rational comparisons",
   "global_optimality_claimed": false,
-  "seconds": 0.3279999999795109
+  "seconds": 0.3363162000896409
 }

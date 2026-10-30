@@ -1,0 +1,49 @@
+{
+  "status": "MATHEMATICAL_EXPRESSIONS_UNCHANGED",
+  "core_functions": [
+    "check",
+    "box",
+    "line_point",
+    "line_range",
+    "derivative",
+    "integral",
+    "initialize",
+    "verify_chunk",
+    "main"
+  ],
+  "kernel_functions": [
+    "F",
+    "ball",
+    "endpoint",
+    "dot",
+    "det",
+    "point",
+    "norm_range",
+    "edge_disk_area",
+    "polygon_disk_area",
+    "vertices",
+    "selftest"
+  ],
+  "asserts_replaced": 27,
+  "search_entry_removed": true,
+  "old_entry_points_retired": true,
+  "data_unchanged": {
+    "translation-gradient-cover-state.json": "df8ce37563d5da8c8c92138b2a3bb926d87a8761de0b1fa2c3fac380c25e11fe",
+    "weights.json": "06fb1706a03e457079e56f992125c3b0cd98e260772701e45792a300d2d990fc",
+    "weights.csv": "d78d1da3c09868929c41d309f4536d7134f215695136b2a2e309a6b93ff4e443",
+    "cost-audit.json": "7e895b8ad4c1cbe8a86658cd21f3a4e8d5fb917c497b149bb1c3b31d6c9cb0c1",
+    "translation-gradient-independent-replay.json": "a45f3e525d74e9143b68040456c30ed9cd3f11ded68d9a6c6a2327e7cbe68d56"
+  },
+  "source_files": {
+    "replay_lower_bound.py": {
+      "v1_name": "temp-verify-translation-gradient.py",
+      "v1_sha256": "c6209d7bbf4a660a89d027bda733a007452acf0cbf92cb0ded366ad470a3907f",
+      "v2_sha256": "3dc87ac643f7183df0b3a065b39bdf880b8d43b5693b9989d9efa496b896dea0"
+    },
+    "radial_area_kernel.py": {
+      "v1_name": "radial_area_certificate_fast.py",
+      "v1_sha256": "17be6bad6e4e13c25322bfbb70c67692c285aa832dd66ed158e92c82abe3aa0c",
+      "v2_sha256": "483b193f10f9815b092197b27cebecd6e134496d02c535f10b151b0e9d8fb691"
+    }
+  }
+}

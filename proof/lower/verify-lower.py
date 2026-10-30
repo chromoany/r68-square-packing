@@ -1,6 +1,6 @@
 """Safely replay the frozen all-real-pose lower-bound certificate.
 
-Normal mode runs the complete original verifier in a fresh temporary directory.
+Normal mode runs the complete fixed verifier in a fresh temporary directory.
 Only a fresh, complete result with all required identities/counts earns PASS.
 --check-inputs performs small identity/rational/topology checks only, without
 importing FLINT or replaying an integral. Do not use Python -O or -OO.
@@ -13,14 +13,15 @@ import importlib.metadata
 import json
 import math
 import os
+import platform
 import subprocess
 import sys
 import tempfile
 
 MANIFEST_NAME='proof-manifest.json'
-MANIFEST_SHA256='fb5f16d42edef110c76f6aaf5ef51e354d403e1861b9ee9c3e9706511508c9a0'
+MANIFEST_SHA256='d925b6766bfa02532cae4a5e9f67f4688118440ef42e042671279bc5577efbd4'
 FROZEN_FILES={
-    'radial_area_certificate_fast.py','temp-verify-translation-gradient.py',
+    'radial_area_kernel.py','replay_lower_bound.py',
     'translation-gradient-cover-state.json','translation-gradient-independent-replay.json',
     'weights.json','weights.csv','cost-audit.json','requirements.txt',
 }
@@ -35,7 +36,7 @@ def read_packet(directory):
     raw=(directory/MANIFEST_NAME).read_bytes()
     require(hashlib.sha256(raw).hexdigest()==MANIFEST_SHA256,'proof manifest identity mismatch')
     manifest=json.loads(raw)
-    require(manifest.get('schema')=='R68_LOWER_FROZEN_PROOF_INPUTS_V1','proof manifest schema')
+    require(manifest.get('schema')=='R68_LOWER_FROZEN_PROOF_INPUTS_V2','proof manifest schema')
     require(set(manifest['files'])==FROZEN_FILES,'unexpected or missing proof payload')
     blobs={}
     for name,identity in manifest['files'].items():
@@ -43,8 +44,8 @@ def read_packet(directory):
         require(len(data)==identity['bytes'] and hashlib.sha256(data).hexdigest()==identity['sha256'],
                 'frozen file identity mismatch: '+name)
         blobs[name]=data
-    require(manifest['script']=='temp-verify-translation-gradient.py','unexpected replay source')
-    require(manifest['kernel']=='radial_area_certificate_fast.py','unexpected area kernel')
+    require(manifest['script']=='replay_lower_bound.py','unexpected replay source')
+    require(manifest['kernel']=='radial_area_kernel.py','unexpected area kernel')
     require(manifest['state']=='translation-gradient-cover-state.json','unexpected state')
     require(manifest['historical_result']=='translation-gradient-independent-replay.json','unexpected result name')
     return manifest,blobs
@@ -135,13 +136,17 @@ def run_fresh_replay(manifest,blobs,state,workers,budget,scratch_parent=None):
             if name!=manifest['historical_result']:
                 require((scratch/name).read_bytes()==raw,'proof input changed during replay: '+name)
         result['fresh_full_replay']=True
+        import flint
+        result['environment']={'python':platform.python_version(),'python_implementation':platform.python_implementation(),'python_flint':version,'flint':flint.__FLINT_VERSION__,'system':platform.system(),'architecture':platform.machine(),'arb_precision_bits':256}
+        result['replay_source_sha256']=manifest['files'][manifest['script']]['sha256']
+        result['area_kernel_sha256']=manifest['files'][manifest['kernel']]['sha256']
         result['wrapper_checked_manifest_sha256']=MANIFEST_SHA256
         result['historical_result_used_as_fresh_output']=False
         return result
 
 
 def main():
-    require(__debug__ and sys.flags.optimize==0,'Python -O/-OO is forbidden: the frozen kernels use assertions')
+    require(__debug__ and sys.flags.optimize==0,'Python -O/-OO is forbidden: optimized execution is not an accepted certificate mode')
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--workers',type=int,default=16,
                         help='worker count accepted by the preserved verifier (1 through 32)')

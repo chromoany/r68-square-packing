@@ -61,6 +61,7 @@ python -B proof/upper/verify-upper.py proof/upper/best-68-exact-state.json --rad
 python -B proof/upper/verify-upper.py --self-test
 python -B proof/lower/verify-lower.py --check-inputs
 python -B proof/lower/test-wrapper.py
+python -B proof/lower/test-entrypoints.py
 ```
 
 The complete upper check reports `PASS_EXACT_68_SQUARE_UPPER_BOUND`. It rechecks all 272 vertices and 2278 unordered square pairs, derives the maximum squared vertex distance, and validates the radius equation and isolating interval.
@@ -78,7 +79,7 @@ The dependency is pinned to `python-flint==0.8.0`. Only `PASS_GLOBAL_REAL_R68_LO
 
 The lower bound uses a nonnegative radial weight on 80 annuli and a complete 11837-leaf cover of a continuous pose domain. Rotation invariance and the reductions proved in the paper extend the certificate to all real translations and rotations. The computation relies on exact rational arithmetic and outward-rounded Arb enclosures.
 
-This GitHub release freshly runs the complete upper check, lower-input preflight and small controls. It preserves the historical complete lower replay; **the integral replay was not rerun during this packaging step**. The [release check record](validation/release-checks.json) distinguishes these cases. This is a computer-assisted proof, not a proof-assistant formalization. No current world-record or exhaustive priority claim is made.
+This revision freshly reruns both the complete upper check and **the complete lower integral replay**: all 11,837 leaves passed in Slurm job 126395001 (`COMPLETED / 0:0`). Explicit acceptance checks and retired search entry points harden the verifier. The bounds and certificate data are unchanged; [v1](https://github.com/chromoany/r68-square-packing/tree/v1.0.0) is preserved. See the [revision note](docs/REVISION-v2.md) and [release checks](validation/release-checks.json). The proof remains computer-assisted, not a Lean/Coq formalization, and makes no current-record or priority claim.
 
 ## Citation and use
 
